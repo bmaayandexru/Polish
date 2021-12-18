@@ -1,0 +1,56 @@
+*** Creating Trace Output File '.\Flash\saw.tra' Ok.
+### Preparing for ADS-LD.
+### Creating ADS-LD Command Line
+### List of Objects: adding '".\flash\startup_lpc17xx.o"'
+### List of Objects: adding '".\flash\core_cm3.o"'
+### List of Objects: adding '".\flash\system_lpc17xx.o"'
+### List of Objects: adding '".\flash\lpc17xx_clkpwr.o"'
+### List of Objects: adding '".\flash\lpc17xx_pinsel.o"'
+### List of Objects: adding '".\flash\lpc17xx_uart.o"'
+### List of Objects: adding '".\flash\lpc17xx_timer.o"'
+### List of Objects: adding '".\flash\sbl_iap.o"'
+### List of Objects: adding '".\flash\modbus.o"'
+### List of Objects: adding '".\flash\fs.o"'
+### List of Objects: adding '".\flash\msg.o"'
+### List of Objects: adding '".\flash\bfs.o"'
+### List of Objects: adding '".\flash\ti.o"'
+### List of Objects: adding '".\flash\timers.o"'
+### List of Objects: adding '".\flash\uart.o"'
+### List of Objects: adding '".\flash\tools.o"'
+### List of Objects: adding '".\flash\flash.o"'
+### List of Objects: adding '".\flash\staticpins.o"'
+### List of Objects: adding '".\flash\virtualpins.o"'
+### List of Objects: adding '".\flash\queue.o"'
+### List of Objects: adding '".\flash\u0packets.o"'
+### List of Objects: adding '".\flash\u1packets.o"'
+### List of Objects: adding '".\flash\main.o"'
+### List of Objects: adding '".\flash\handlers.o"'
+### List of Objects: adding '".\flash\motors.o"'
+### List of Objects: adding '".\flash\motor_r.o"'
+### List of Objects: adding '".\flash\motor_a.o"'
+### List of Objects: adding '".\flash\motor_vud.o"'
+### List of Objects: adding '".\flash\freqinvr.o"'
+### List of Objects: adding '".\flash\regs.o"'
+### List of Objects: adding '".\flash\vpfrz.o"'
+### List of Objects: adding '".\flash\vpsaw.o"'
+### List of Objects: adding '".\flash\keypad.o"'
+### List of Objects: adding '".\flash\pressctrl.o"'
+### List of Objects: adding '".\flash\motor_x.o"'
+### List of Objects: adding '".\flash\motor_y.o"'
+### List of Objects: adding '".\flash\motor_z.o"'
+### List of Objects: adding '".\flash\pwm.o"'
+### ADS-LD Command completed:
+--cpu Cortex-M3 ".\flash\startup_lpc17xx.o" ".\flash\core_cm3.o" ".\flash\system_lpc17xx.o" ".\flash\lpc17xx_clkpwr.o" ".\flash\lpc17xx_pinsel.o" ".\flash\lpc17xx_uart.o" ".\flash\lpc17xx_timer.o" ".\flash\sbl_iap.o" ".\flash\modbus.o" ".\flash\fs.o" ".\flash\msg.o" ".\flash\bfs.o" ".\flash\ti.o" ".\flash\timers.o" ".\flash\uart.o" ".\flash\tools.o" ".\flash\flash.o" ".\flash\staticpins.o" ".\flash\virtualpins.o" ".\flash\queue.o" ".\flash\u0packets.o" ".\flash\u1packets.o" ".\flash\main.o" ".\flash\handlers.o" ".\flash\motors.o" ".\flash\motor_r.o" ".\flash\motor_a.o" ".\flash\motor_vud.o" ".\flash\freqinvr.o" ".\flash\regs.o" ".\flash\vpfrz.o" ".\flash\vpsaw.o" ".\flash\keypad.o" ".\flash\pressctrl.o" ".\flash\motor_x.o" ".\flash\motor_y.o" ".\flash\motor_z.o" ".\flash\pwm.o" --strict --scatter ".\Flash\saw.sct" 
+--autoat --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\saw.map" -o ".\Flash\saw.axf"### Preparing Environment (PrepEnvAds)
+### ADS-LD Output File: '.\Flash\saw.axf'
+### ADS-LD Command File: '.\Flash\saw.lnp'
+### Checking for dirty Components...
+### Creating CmdFile '.\Flash\saw.lnp', Handle=0x00000368
+### Writing '.lnp' file
+### ADS-LD Command file '.\Flash\saw.lnp' is ready.
+### ADS-LD: About to start ADS-LD Thread.
+### ADS-LD: executed with 0 errors
+### Updating obj list
+### LDADS_file() completed.

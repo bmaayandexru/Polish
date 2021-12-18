@@ -1,0 +1,16 @@
+.\flash\virtualpins.o: UCNC\VirtualPins.c
+.\flash\virtualpins.o: UCNC\Defs.h
+.\flash\virtualpins.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\flash\virtualpins.o: UCNC\StaticPins.h
+.\flash\virtualpins.o: C:\Keil_v5\ARM\INC\NXP\LPC17xx\LPC17xx.h
+.\flash\virtualpins.o: C:\Keil_v5\ARM\CMSIS\Include\core_cm3.h
+.\flash\virtualpins.o: C:\Keil_v5\ARM\CMSIS\Include\core_cmInstr.h
+.\flash\virtualpins.o: C:\Keil_v5\ARM\CMSIS\Include\core_cmFunc.h
+.\flash\virtualpins.o: C:\Keil_v5\ARM\INC\NXP\LPC17xx\system_LPC17xx.h
+.\flash\virtualpins.o: UCNC\VirtualPins.h
+.\flash\virtualpins.o: UCNC\ti.h
+.\flash\virtualpins.o: UCNC\Timers.h
+.\flash\virtualpins.o: .\Main\regs.h
+.\flash\virtualpins.o: .\Main\motors.h
+.\flash\virtualpins.o: .\Main\regs.h
+.\flash\virtualpins.o: .\Main\KeyPad.h

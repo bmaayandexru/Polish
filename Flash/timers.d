@@ -1,0 +1,14 @@
+.\flash\timers.o: UCNC\Timers.c
+.\flash\timers.o: UCNC\Defs.h
+.\flash\timers.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\flash\timers.o: .\Drivers\include\lpc17xx_timer.h
+.\flash\timers.o: C:\Keil_v5\ARM\INC\NXP\LPC17xx\LPC17xx.h
+.\flash\timers.o: C:\Keil_v5\ARM\CMSIS\Include\core_cm3.h
+.\flash\timers.o: C:\Keil_v5\ARM\CMSIS\Include\core_cmInstr.h
+.\flash\timers.o: C:\Keil_v5\ARM\CMSIS\Include\core_cmFunc.h
+.\flash\timers.o: C:\Keil_v5\ARM\INC\NXP\LPC17xx\system_LPC17xx.h
+.\flash\timers.o: .\Drivers\include\lpc_types.h
+.\flash\timers.o: UCNC\Timers.h
+.\flash\timers.o: .\Main\msg.h
+.\flash\timers.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+.\flash\timers.o: UCNC\ti.h

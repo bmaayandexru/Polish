@@ -1,0 +1,193 @@
+;#<FEEDBACK># ARM Linker, 5060061: Last Updated: Thu Jan 26 18:15:36 2017
+;VERSION 0.2
+;FILE bfs.o
+bsFS_BReadLn <= USED 0
+;FILE flash.o
+FLASH_GetTotalSize <= USED 0
+FLASH_PageAddress <= USED 0
+FLASH_ReadStatusRegister <= USED 0
+FLASH_SectorErase <= USED 0
+FLASH_SendByte <= USED 0
+FLASH_test <= USED 0
+SPI_Init <= USED 0
+__asm___7_Flash_c_2dfaabc8____REV16 <= USED 0
+__asm___7_Flash_c_2dfaabc8____REVSH <= USED 0
+;FILE freqinvr.o
+FIAnswer <= USED 0
+FILoadConf <= USED 0
+FIQuery <= USED 0
+__asm___10_FreqInvr_c_3b4cb59b____REV16 <= USED 0
+__asm___10_FreqInvr_c_3b4cb59b____REVSH <= USED 0
+;FILE fs.o
+FS_FCS_Show <= USED 0
+FS_GetFCSState <= USED 0
+FS_GetFreeClustersNum <= USED 0
+FS_Params_Show <= USED 0
+FS_Read <= USED 0
+FS_ReadLn <= USED 0
+FS_ReadPrevLn <= USED 0
+FS_RemainSize <= USED 0
+FS_Write <= USED 0
+FS_WriteLn <= USED 0
+__asm___4_FS_c_6674ac69____REV16 <= USED 0
+__asm___4_FS_c_6674ac69____REVSH <= USED 0
+;FILE handlers.o
+BackApplyCmd <= USED 0
+BackCalcBlock <= USED 0
+CalcBlock <= USED 0
+CheckPrgFile <= USED 0
+EndGo <= USED 0
+EndStop <= USED 0
+ErrToMessage <= USED 0
+InitNextBlock <= USED 0
+ReadNextLine <= USED 0
+ReadPrevLine <= USED 0
+RecSetGo <= USED 0
+RecSetPause <= USED 0
+RecSetStop <= USED 0
+__asm___10_Handlers_c_Busy____REV16 <= USED 0
+__asm___10_Handlers_c_Busy____REVSH <= USED 0
+qbExtrBlock <= USED 0
+;FILE keypad.o
+;FILE lpc17xx_clkpwr.o
+CLKPWR_DeepPowerDown <= USED 0
+CLKPWR_DeepSleep <= USED 0
+CLKPWR_PowerDown <= USED 0
+CLKPWR_Sleep <= USED 0
+__asm___16_lpc17xx_clkpwr_c_5f9c9c89____REV16 <= USED 0
+__asm___16_lpc17xx_clkpwr_c_5f9c9c89____REVSH <= USED 0
+;FILE lpc17xx_pinsel.o
+PINSEL_ConfigTraceFunc <= USED 0
+PINSEL_SetI2C0Pins <= USED 0
+__asm___16_lpc17xx_pinsel_c_5ef00b0e____REV16 <= USED 0
+__asm___16_lpc17xx_pinsel_c_5ef00b0e____REVSH <= USED 0
+;FILE lpc17xx_timer.o
+TIM_ClearIntCapturePending <= USED 0
+TIM_ConfigCapture <= USED 0
+TIM_ConfigStructInit <= USED 0
+TIM_DeInit <= USED 0
+TIM_GetCaptureValue <= USED 0
+TIM_GetIntCaptureStatus <= USED 0
+TIM_ResetCounter <= USED 0
+TIM_UpdateMatchValue <= USED 0
+__asm___15_lpc17xx_timer_c_6c20b5c9____REV16 <= USED 0
+__asm___15_lpc17xx_timer_c_6c20b5c9____REVSH <= USED 0
+;FILE lpc17xx_uart.o
+UART_ABClearIntPending <= USED 0
+UART_ABCmd <= USED 0
+UART_ConfigStructInit <= USED 0
+UART_DeInit <= USED 0
+UART_ForceBreak <= USED 0
+UART_FullModemConfigMode <= USED 0
+UART_FullModemForcePinState <= USED 0
+UART_FullModemGetStatus <= USED 0
+UART_IrDACmd <= USED 0
+UART_IrDAInvtInputCmd <= USED 0
+UART_IrDAPulseDivConfig <= USED 0
+UART_RS485Config <= USED 0
+UART_RS485ReceiverCmd <= USED 0
+UART_RS485Send <= USED 0
+UART_RS485SendData <= USED 0
+UART_RS485SendSlvAddr <= USED 0
+__asm___14_lpc17xx_uart_c_e5efacd7____REV16 <= USED 0
+__asm___14_lpc17xx_uart_c_e5efacd7____REVSH <= USED 0
+;FILE main.o
+PinsErrorHandler <= USED 0
+Test_Handler <= USED 0
+__asm___6_Main_c_000d4e9e____REV16 <= USED 0
+__asm___6_Main_c_000d4e9e____REVSH <= USED 0
+;FILE modbus.o
+__asm___8_Modbus_c_8fffd5c9____REV16 <= USED 0
+__asm___8_Modbus_c_8fffd5c9____REVSH <= USED 0
+;FILE motor_x.o
+__asm___9_Motor_X_c_ClrSX____REV16 <= USED 0
+__asm___9_Motor_X_c_ClrSX____REVSH <= USED 0
+;FILE motor_y.o
+__asm___9_Motor_Y_c_ClrSY____REV16 <= USED 0
+__asm___9_Motor_Y_c_ClrSY____REVSH <= USED 0
+;FILE motor_z.o
+__asm___9_Motor_Z_c_ClrSZ____REV16 <= USED 0
+__asm___9_Motor_Z_c_ClrSZ____REVSH <= USED 0
+;FILE motors.o
+DecItCount <= USED 0
+ShowMC <= USED 0
+ShowMS <= USED 0
+__asm___8_Motors_c_ZComp____REV16 <= USED 0
+__asm___8_Motors_c_ZComp____REVSH <= USED 0
+;FILE msg.o
+__asm___5_msg_c_MsgLen____REV16 <= USED 0
+__asm___5_msg_c_MsgLen____REVSH <= USED 0
+;FILE pwm.o
+PWM_Stop <= USED 0
+__asm___5_pwm_c_PWM_Init____REV16 <= USED 0
+__asm___5_pwm_c_PWM_Init____REVSH <= USED 0
+;FILE queue.o
+InitQueue <= USED 0
+__asm___7_queue_c_EAddr____REV16 <= USED 0
+__asm___7_queue_c_EAddr____REVSH <= USED 0
+;FILE regs.o
+CloseFilesHandles <= USED 0
+ROHandler <= USED 0
+SaveRegsNoMes <= USED 0
+SetBase <= USED 0
+__asm___6_regs_c_iva____REV16 <= USED 0
+__asm___6_regs_c_iva____REVSH <= USED 0
+pCurCadrHandle <= USED 0
+;FILE sbl_iap.o
+__asm___9_sbl_iap_c_2c056f0b____REV16 <= USED 0
+__asm___9_sbl_iap_c_2c056f0b____REVSH <= USED 0
+check_isp_entry_pin <= USED 0
+disable_interrupts <= USED 0
+enable_interrupts <= USED 0
+erase_sector <= USED 0
+erase_user_flash <= USED 0
+execute_user_code <= USED 0
+find_erase_prepare_sector <= USED 0
+iap_entry <= USED 0
+prepare_sector <= USED 0
+user_code_present <= USED 0
+write_data <= USED 0
+write_flash <= USED 0
+;FILE startup_lpc17xx.o
+;FILE staticpins.o
+__asm___12_StaticPins_c_aPin____REV16 <= USED 0
+__asm___12_StaticPins_c_aPin____REVSH <= USED 0
+;FILE system_lpc17xx.o
+SystemCoreClockUpdate <= USED 0
+__asm___16_system_LPC17xx_c_5d646a67____REV16 <= USED 0
+__asm___16_system_LPC17xx_c_5d646a67____REVSH <= USED 0
+;FILE ti.o
+DecTIs <= USED 0
+IncTimes <= USED 0
+;FILE timers.o
+__asm___8_Timers_c_T0MR0____REV16 <= USED 0
+__asm___8_Timers_c_T0MR0____REVSH <= USED 0
+;FILE tools.o
+Round <= USED 0
+;FILE u0packets.o
+SendAddPointPack <= USED 0
+__asm___11_u0packets_c_DataToU1____REV16 <= USED 0
+__asm___11_u0packets_c_DataToU1____REVSH <= USED 0
+pFl_EraseSector <= USED 0
+pFl_GetTimeouts <= USED 0
+pFl_SetTimeouts <= USED 0
+;FILE u1packets.o
+__asm___11_u1packets_c_c6f7a7ee____REV16 <= USED 0
+__asm___11_u1packets_c_c6f7a7ee____REVSH <= USED 0
+;FILE uart.o
+StartDelay <= USED 0
+UART0_IntErr <= USED 0
+UART1_IntErr <= USED 0
+UARTx_PlaceForSend <= USED 0
+__asm___6_UART_c_bb43f66e____REV16 <= USED 0
+__asm___6_UART_c_bb43f66e____REVSH <= USED 0
+;FILE virtualpins.o
+ClrGetPin <= USED 0
+DefaultInitPins <= USED 0
+GetPin <= USED 0
+GetPinDir <= USED 0
+GetPinInv <= USED 0
+SetPinInv <= USED 0
+SetPinsErrHandler <= USED 0
+__asm___13_VirtualPins_c_adrb____REV16 <= USED 0
+__asm___13_VirtualPins_c_adrb____REVSH <= USED 0

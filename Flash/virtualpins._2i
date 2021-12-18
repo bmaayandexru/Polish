@@ -1,0 +1,6 @@
+-c --cpu Cortex-M3 -g -O2 --apcs=interwork --asm --interleave --asm_dir ".\\" -I.\Main -I.\Drivers -I.\Drivers\include -I.\UCNC
+-I C:\Keil_v5\ARM\RV31\INC
+-I C:\Keil_v5\ARM\CMSIS\Include
+-I C:\Keil_v5\ARM\Inc\NXP\LPC17xx
+-D__UVISION_VERSION="517"
+-o .\flash\virtualpins.o --list_dir ".\\" --list --omf_browse .\flash\virtualpins.crf --depend .\flash\virtualpins.d --feedback ".\Flash\saw.fed" "UCNC\VirtualPins.c"

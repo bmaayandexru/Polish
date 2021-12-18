@@ -1,0 +1,1 @@
+-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I.\Main -I.\Common -I.\Retarget -I.\Drivers\include -I.\Drivers -I "C:\Keil\ARM\CMSIS\Include" -I "C:\Keil\ARM\INC\NXP\LPC17xx" -o ".\Flash\common.o" --omf_browse ".\Flash\common.crf" --depend ".\Flash\common.d" "Common\Common.c"

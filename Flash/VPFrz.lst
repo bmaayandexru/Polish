@@ -1,0 +1,704 @@
+L 1 "Main\VPFrz.c"
+N#include "Defs.h"
+L 1 ".\UCNC\Defs.h" 1
+N/*****************************************************************/
+N//
+N//  МОДУЛЬ ОБЩИХ ОПРЕДЕЛЕНИЙ
+N//
+N/*****************************************************************/
+N
+N#ifndef __DEFS_H_
+N#define __DEFS_H_
+N
+N#include <stdint.h>
+L 1 "C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h" 1
+N/* Copyright (C) ARM Ltd., 1999,2014 */
+N/* All rights reserved */
+N
+N/*
+N * RCS $Revision: 185525 $
+N * Checkin $Date: 2014-05-29 12:44:48 +0100 (Thu, 29 May 2014) $
+N * Revising $Author: agrant $
+N */
+N
+N#ifndef __stdint_h
+N#define __stdint_h
+N#define __ARMCLIB_VERSION 5060002
+N
+N  #ifdef __INT64_TYPE__
+S    /* armclang predefines '__INT64_TYPE__' and '__INT64_C_SUFFIX__' */
+S    #define __INT64 __INT64_TYPE__
+N  #else
+N    /* armcc has builtin '__int64' which can be used in --strict mode */
+N    #define __INT64 __int64
+N    #define __INT64_C_SUFFIX__ ll
+N  #endif
+N  #define __PASTE2(x, y) x ## y
+N  #define __PASTE(x, y) __PASTE2(x, y)
+N  #define __INT64_C(x)  __ESCAPE__(__PASTE(x, __INT64_C_SUFFIX__))
+N  #define __UINT64_C(x)  __ESCAPE__(__PASTE(x ## u, __INT64_C_SUFFIX__))
+N  #if defined(__clang__) || (defined(__ARMCC_VERSION) && !defined(__STRICT_ANSI__))
+X  #if 0L || (1L && !0L)
+N    /* armclang and non-strict armcc allow 'long long' in system headers */
+N    #define __LONGLONG long long
+N  #else
+S    /* strict armcc has '__int64' */
+S    #define __LONGLONG __int64
+N  #endif
+N
+N  #ifndef __STDINT_DECLS
+N  #define __STDINT_DECLS
+N
+N    #undef __CLIBNS
+N
+N    #ifdef __cplusplus
+S      namespace std {
+S          #define __CLIBNS std::
+S          extern "C" {
+N    #else
+N      #define __CLIBNS
+N    #endif  /* __cplusplus */
+N
+N
+N/*
+N * 'signed' is redundant below, except for 'signed char' and if
+N * the typedef is used to declare a bitfield.
+N */
+N
+N    /* 7.18.1.1 */
+N
+N    /* exact-width signed integer types */
+Ntypedef   signed          char int8_t;
+Ntypedef   signed short     int int16_t;
+Ntypedef   signed           int int32_t;
+Ntypedef   signed       __INT64 int64_t;
+Xtypedef   signed       __int64 int64_t;
+N
+N    /* exact-width unsigned integer types */
+Ntypedef unsigned          char uint8_t;
+Ntypedef unsigned short     int uint16_t;
+Ntypedef unsigned           int uint32_t;
+Ntypedef unsigned       __INT64 uint64_t;
+Xtypedef unsigned       __int64 uint64_t;
+N
+N    /* 7.18.1.2 */
+N
+N    /* smallest type of at least n bits */
+N    /* minimum-width signed integer types */
+Ntypedef   signed          char int_least8_t;
+Ntypedef   signed short     int int_least16_t;
+Ntypedef   signed           int int_least32_t;
+Ntypedef   signed       __INT64 int_least64_t;
+Xtypedef   signed       __int64 int_least64_t;
+N
+N    /* minimum-width unsigned integer types */
+Ntypedef unsigned          char uint_least8_t;
+Ntypedef unsigned short     int uint_least16_t;
+Ntypedef unsigned           int uint_least32_t;
+Ntypedef unsigned       __INT64 uint_least64_t;
+Xtypedef unsigned       __int64 uint_least64_t;
+N
+N    /* 7.18.1.3 */
+N
+N    /* fastest minimum-width signed integer types */
+Ntypedef   signed           int int_fast8_t;
+Ntypedef   signed           int int_fast16_t;
+Ntypedef   signed           int int_fast32_t;
+Ntypedef   signed       __INT64 int_fast64_t;
+Xtypedef   signed       __int64 int_fast64_t;
+N
+N    /* fastest minimum-width unsigned integer types */
+Ntypedef unsigned           int uint_fast8_t;
+Ntypedef unsigned           int uint_fast16_t;
+Ntypedef unsigned           int uint_fast32_t;
+Ntypedef unsigned       __INT64 uint_fast64_t;
+Xtypedef unsigned       __int64 uint_fast64_t;
+N
+N    /* 7.18.1.4 integer types capable of holding object pointers */
+N#if __sizeof_ptr == 8
+X#if 4 == 8
+Stypedef   signed       __INT64 intptr_t;
+Stypedef unsigned       __INT64 uintptr_t;
+N#else
+Ntypedef   signed           int intptr_t;
+Ntypedef unsigned           int uintptr_t;
+N#endif
+N
+N    /* 7.18.1.5 greatest-width integer types */
+Ntypedef   signed     __LONGLONG intmax_t;
+Xtypedef   signed     long long intmax_t;
+Ntypedef unsigned     __LONGLONG uintmax_t;
+Xtypedef unsigned     long long uintmax_t;
+N
+N
+N#if !defined(__cplusplus) || defined(__STDC_LIMIT_MACROS)
+X#if !0L || 0L
+N
+N    /* 7.18.2.1 */
+N
+N    /* minimum values of exact-width signed integer types */
+N#define INT8_MIN                   -128
+N#define INT16_MIN                -32768
+N#define INT32_MIN          (~0x7fffffff)   /* -2147483648 is unsigned */
+N#define INT64_MIN  __INT64_C(~0x7fffffffffffffff) /* -9223372036854775808 is unsigned */
+N
+N    /* maximum values of exact-width signed integer types */
+N#define INT8_MAX                    127
+N#define INT16_MAX                 32767
+N#define INT32_MAX            2147483647
+N#define INT64_MAX  __INT64_C(9223372036854775807)
+N
+N    /* maximum values of exact-width unsigned integer types */
+N#define UINT8_MAX                   255
+N#define UINT16_MAX                65535
+N#define UINT32_MAX           4294967295u
+N#define UINT64_MAX __UINT64_C(18446744073709551615)
+N
+N    /* 7.18.2.2 */
+N
+N    /* minimum values of minimum-width signed integer types */
+N#define INT_LEAST8_MIN                   -128
+N#define INT_LEAST16_MIN                -32768
+N#define INT_LEAST32_MIN          (~0x7fffffff)
+N#define INT_LEAST64_MIN  __INT64_C(~0x7fffffffffffffff)
+N
+N    /* maximum values of minimum-width signed integer types */
+N#define INT_LEAST8_MAX                    127
+N#define INT_LEAST16_MAX                 32767
+N#define INT_LEAST32_MAX            2147483647
+N#define INT_LEAST64_MAX  __INT64_C(9223372036854775807)
+N
+N    /* maximum values of minimum-width unsigned integer types */
+N#define UINT_LEAST8_MAX                   255
+N#define UINT_LEAST16_MAX                65535
+N#define UINT_LEAST32_MAX           4294967295u
+N#define UINT_LEAST64_MAX __UINT64_C(18446744073709551615)
+N
+N    /* 7.18.2.3 */
+N
+N    /* minimum values of fastest minimum-width signed integer types */
+N#define INT_FAST8_MIN           (~0x7fffffff)
+N#define INT_FAST16_MIN          (~0x7fffffff)
+N#define INT_FAST32_MIN          (~0x7fffffff)
+N#define INT_FAST64_MIN  __INT64_C(~0x7fffffffffffffff)
+N
+N    /* maximum values of fastest minimum-width signed integer types */
+N#define INT_FAST8_MAX             2147483647
+N#define INT_FAST16_MAX            2147483647
+N#define INT_FAST32_MAX            2147483647
+N#define INT_FAST64_MAX  __INT64_C(9223372036854775807)
+N
+N    /* maximum values of fastest minimum-width unsigned integer types */
+N#define UINT_FAST8_MAX            4294967295u
+N#define UINT_FAST16_MAX           4294967295u
+N#define UINT_FAST32_MAX           4294967295u
+N#define UINT_FAST64_MAX __UINT64_C(18446744073709551615)
+N
+N    /* 7.18.2.4 */
+N
+N    /* minimum value of pointer-holding signed integer type */
+N#if __sizeof_ptr == 8
+X#if 4 == 8
+S#define INTPTR_MIN INT64_MIN
+N#else
+N#define INTPTR_MIN INT32_MIN
+N#endif
+N
+N    /* maximum value of pointer-holding signed integer type */
+N#if __sizeof_ptr == 8
+X#if 4 == 8
+S#define INTPTR_MAX INT64_MAX
+N#else
+N#define INTPTR_MAX INT32_MAX
+N#endif
+N
+N    /* maximum value of pointer-holding unsigned integer type */
+N#if __sizeof_ptr == 8
+X#if 4 == 8
+S#define UINTPTR_MAX INT64_MAX
+N#else
+N#define UINTPTR_MAX INT32_MAX
+N#endif
+N
+N    /* 7.18.2.5 */
+N
+N    /* minimum value of greatest-width signed integer type */
+N#define INTMAX_MIN  __ESCAPE__(~0x7fffffffffffffffll)
+N
+N    /* maximum value of greatest-width signed integer type */
+N#define INTMAX_MAX  __ESCAPE__(9223372036854775807ll)
+N
+N    /* maximum value of greatest-width unsigned integer type */
+N#define UINTMAX_MAX __ESCAPE__(18446744073709551615ull)
+N
+N    /* 7.18.3 */
+N
+N    /* limits of ptrdiff_t */
+N#if __sizeof_ptr == 8
+X#if 4 == 8
+S#define PTRDIFF_MIN INT64_MIN
+S#define PTRDIFF_MAX INT64_MAX
+N#else
+N#define PTRDIFF_MIN INT32_MIN
+N#define PTRDIFF_MAX INT32_MAX
+N#endif
+N
+N    /* limits of sig_atomic_t */
+N#define SIG_ATOMIC_MIN (~0x7fffffff)
+N#define SIG_ATOMIC_MAX   2147483647
+N
+N    /* limit of size_t */
+N#if __sizeof_ptr == 8
+X#if 4 == 8
+S#define SIZE_MAX UINT64_MAX
+N#else
+N#define SIZE_MAX UINT32_MAX
+N#endif
+N
+N    /* limits of wchar_t */
+N    /* NB we have to undef and redef because they're defined in both
+N     * stdint.h and wchar.h */
+N#undef WCHAR_MIN
+N#undef WCHAR_MAX
+N
+N#if defined(__WCHAR32) || (defined(__ARM_SIZEOF_WCHAR_T) && __ARM_SIZEOF_WCHAR_T == 4)
+X#if 0L || (0L && __ARM_SIZEOF_WCHAR_T == 4)
+S  #define WCHAR_MIN   0
+S  #define WCHAR_MAX   0xffffffffU
+N#else
+N  #define WCHAR_MIN   0
+N  #define WCHAR_MAX   65535
+N#endif
+N
+N    /* limits of wint_t */
+N#define WINT_MIN (~0x7fffffff)
+N#define WINT_MAX 2147483647
+N
+N#endif /* __STDC_LIMIT_MACROS */
+N
+N#if !defined(__cplusplus) || defined(__STDC_CONSTANT_MACROS)
+X#if !0L || 0L
+N
+N    /* 7.18.4.1 macros for minimum-width integer constants */
+N#define INT8_C(x)   (x)
+N#define INT16_C(x)  (x)
+N#define INT32_C(x)  (x)
+N#define INT64_C(x)  __INT64_C(x)
+N
+N#define UINT8_C(x)  (x ## u)
+N#define UINT16_C(x) (x ## u)
+N#define UINT32_C(x) (x ## u)
+N#define UINT64_C(x) __UINT64_C(x)
+N
+N    /* 7.18.4.2 macros for greatest-width integer constants */
+N#define INTMAX_C(x)  __ESCAPE__(x ## ll)
+N#define UINTMAX_C(x) __ESCAPE__(x ## ull)
+N
+N#endif /* __STDC_CONSTANT_MACROS */
+N
+N    #ifdef __cplusplus
+S         }  /* extern "C" */
+S      }  /* namespace std */
+N    #endif /* __cplusplus */
+N  #endif /* __STDINT_DECLS */
+N
+N  #ifdef __cplusplus
+S    #ifndef __STDINT_NO_EXPORTS
+S      using ::std::int8_t;
+S      using ::std::int16_t;
+S      using ::std::int32_t;
+S      using ::std::int64_t;
+S      using ::std::uint8_t;
+S      using ::std::uint16_t;
+S      using ::std::uint32_t;
+S      using ::std::uint64_t;
+S      using ::std::int_least8_t;
+S      using ::std::int_least16_t;
+S      using ::std::int_least32_t;
+S      using ::std::int_least64_t;
+S      using ::std::uint_least8_t;
+S      using ::std::uint_least16_t;
+S      using ::std::uint_least32_t;
+S      using ::std::uint_least64_t;
+S      using ::std::int_fast8_t;
+S      using ::std::int_fast16_t;
+S      using ::std::int_fast32_t;
+S      using ::std::int_fast64_t;
+S      using ::std::uint_fast8_t;
+S      using ::std::uint_fast16_t;
+S      using ::std::uint_fast32_t;
+S      using ::std::uint_fast64_t;
+S      using ::std::intptr_t;
+S      using ::std::uintptr_t;
+S      using ::std::intmax_t;
+S      using ::std::uintmax_t;
+S    #endif
+N  #endif /* __cplusplus */
+N
+N#undef __INT64
+N#undef __LONGLONG
+N
+N#endif /* __stdint_h */
+N
+N/* end of stdint.h */
+L 11 ".\UCNC\Defs.h" 2
+N
+N#define TRUE 	1
+N#define FALSE 	0
+N
+N//--------------------------------------------------
+N// Короткие имена стандартных типов
+N//--------------------------------------------------
+Ntypedef int8_t   s8;
+Ntypedef int16_t  s16;
+Ntypedef int32_t  s32;
+Ntypedef int64_t  s64;
+Ntypedef uint8_t  u8;
+Ntypedef uint16_t u16;
+Ntypedef uint32_t u32;
+Ntypedef uint64_t u64;
+Ntypedef u8 bool;
+Ntypedef u8 BOOL;
+N
+N//#define VERSION 0x01020124
+N#define VERSION 0x01020124
+N// отладка функции Move_Handler
+N//#define MOVE_D
+N// пила
+N// отключение загрузки параметров с флэш
+N//#define __NOT_LOAD_PARAMS__
+N// пила
+N//#define __SAW__
+N// фрезер
+N#define __FREZER__
+N#endif // __DEFS_H_
+L 2 "Main\VPFrz.c" 2
+N
+N#ifdef __FREZER__
+N
+N#include "VirtualPins.h"
+L 1 ".\UCNC\VirtualPins.h" 1
+N#ifndef __VIRTUALPINS_H__
+N#define __VIRTUALPINS_H__
+N
+N//#include <RTL.h>
+N#include "Defs.h"
+N
+N//нумерация реальных пинов
+N// смещения в таблице aPin введены для удобства использования
+N// они прописываются в таблице виртуальных пинов в поле nPin
+N
+N#define OUT1	0
+N#define OUT2  	1
+N#define OUT3  	2
+N#define OUT4  	3
+N#define OUT5  	4
+N#define OUT6  	5
+N#define OUT7  	6
+N#define OUT8  	7
+N#define OUT9  	8
+N#define OUT10 	9
+N#define OUT11 	10
+N#define OUT12 	11
+N#define OUT13 	12
+N#define OUT14 	13
+N#define OUT15 	14
+N#define OUT16 	15
+N#define OUT17 	16
+N#define OUT18 	17
+N#define OUT19 	18
+N#define OUT20 	19
+N
+N#define IN1   	20
+N#define IN2   	21
+N#define IN3   	22
+N#define IN4   	23
+N#define IN5   	24
+N#define IN6   	25
+N#define IN7   	26
+N#define IN8   	27
+N#define IN9   	28
+N#define IN10  	29
+N#define IN11  	30
+N#define IN12  	31
+N#define IN13  	32
+N#define IN14  	33
+N#define IN15  	34
+N#define IN16  	35
+N
+N// размер таблицы виртуальных пинов
+N#define VIRTUAL_PINTAB_SIZE 36
+N
+N// структура возвращаемая обработчиком ошибок
+Ntypedef struct{
+N	u16 ErrorCode; 	// код ошибки 
+N	u8 vNum;		// номер в таблице виртуальных пинов 
+N	u8 sNum;		// номер в таблице статических пинов (FF не определено)
+N	u8 sPort;		// порт [0..3] или FF - не определено
+N	u32 sPin;		// пин [0..31] или FF - не определено
+N	u8 Dir;			// направление 0 - IN, 1-OUT, FF - не определено
+N	u8 Inv;			// инверсия 0 - нет, 1 - есть, FF - не определено
+N} TPinError;
+N
+N// Значения  ErrorCode:
+N// 0x1X - ошибка инициализации
+N// 		0x10 - нет физичecкого пина с таким номером
+N//		0x11 - неправильное значение направления (и не DIR_IN и не DIR_OUT)
+N// 0x2X - ошибка установки
+N// 		0x20 - нет физичecкого пина с таким номером
+N//		0x21 - неправильное значение направления (не DIR_OUT)
+N// 0x3X - ошибка сброса
+N// 		0x30 - нет физичecкого пина с таким номером
+N//		0x31 - неправильное значение направления (не DIR_OUT)
+N// 0x4X - ошибка чтения
+N// 		0x40 - нет физичecкого пина с таким номером
+N//		0x41 - неправильное значение направления (не DIR_IN)
+N// 0x5X - ошибка чтения направления
+N// 		0x50 - нет физичecкого пина с таким номером
+N// 0x6X - ошибка записи направления
+N// 		0x60 - нет физичecкого пина с таким номером
+N// 0x7X - ошибка чтения значения инверсии
+N// 		0x70 - нет физичecкого пина с таким номером
+N// 0x8X - ошибка записи значения инверсии
+N// 		0x80 - нет физичecкого пина с таким номером
+N// 		0x82 - пин не инициализирован (не установлено значение направления)
+N
+N// тип обработчика ошибок
+Ntypedef void(*TErrHandler)(TPinError * pe);
+N
+N// тип таблицы виртуальных пинов
+Ntypedef struct tagVPIN {
+N	u8		nPin; 		// смещение в таблице aPin (OUTXX или INXX)
+N	u8		Inv;		// инверсия
+N	u8		State;		// состояние для выходных пинов
+N//	u8		trash;		// состояние для выходных пинов
+N} TVPIN;
+N
+N// сводная таблица для быстрого обращения к виртуальным пинам
+Ntypedef struct tagVQPIN {
+N	volatile u32* SetAddr;	// LPCGPIO[0,1,2,3]->FIOSET или FIOCLR если инверсия
+N	volatile u32* ClrAddr; 	// LPCGPIO[0,1,2,3]->FIOCLR или FIOSET если инверсия
+N	volatile u32* GetAddr;	// LPCGPIO[0,1,2,3]->FIOPIN 
+N	u32 Mask;			// маска
+N	u32 Inv;			// инверсия
+N} TVQPIN;
+N
+Ntypedef TVPIN TaVPIN[VIRTUAL_PINTAB_SIZE];
+Xtypedef TVPIN TaVPIN[36];
+N
+Ntypedef TVQPIN TaVQPIN[VIRTUAL_PINTAB_SIZE];
+Xtypedef TVQPIN TaVQPIN[36];
+N
+Nextern TaVPIN *pvPins;
+Nextern TaVQPIN aVQPIN;
+N//extern TaVPIN vPinsdef;
+N
+N// формирование таблицы для процедур быстрого управления сигналами
+N// Q1SetPin(), Q1ClrPin(), Q1GetPin
+Nvoid 	FormQPinTable(void);
+N
+N// установщик обработчика ошибок
+Nvoid SetPinsErrHandler(TErrHandler eh);
+N
+NBOOL InitPin(u8 n);
+N// инициализация виртуального пина
+N// u8 n - номер виртуального пина
+N// возвращает TRUE если инициализация прошла успешно
+N// возвращает FALSE если зафиксирована ошибка в параметрах
+N// при ошибочной ситуации вызывается обработчик ошибок
+N
+NBOOL SetPin(u8 n);
+N// установка виртуального пина
+N// u8 n - номер виртуального пина
+N// возвращает TRUE если установка прошла успешно
+N// возвращает FALSE если зафиксирована ошибка в параметре
+N// при ошибочной ситуации вызывается обработчик ошибок
+N
+Nvoid QSetPin(u8 n);
+N// быстрая (без проверок) установка виртуального пина
+N
+Nvoid Q1SetPin(u8 n);
+N// очень быстрая (без проверок) установка виртуального пина
+N
+NBOOL ClrPin(u8 n);
+N// сброс виртуального пина
+N// u8 n - номер виртуального пина
+N// возвращает TRUE если установка прошла успешно
+N// возвращает FALSE если зафиксирована ошибка в параметре
+N// при ошибочной ситуации вызывается обработчик ошибок
+N
+Nvoid QClrPin(u8 n);
+N// быстрый (без проверок) сброс виртуального пина
+N
+Nvoid Q1ClrPin(u8 n);
+N// очень быстрый (без проверок) сброс виртуального пина
+N
+Nu32 GetPin(u8 n);
+N// чтение состояния виртуального пина
+N// возвращает 0 если пин сброшен
+N// возвращает не 0 если пин установлен
+N// возвращает 0xFFFFFFFF если обнаружена ошибка
+N// при обнаружении ошибки вызывается обработчик
+N
+Nu32 QGetPin(u8 n);
+N// быстрое (без проверок) чтение состояния виртуального пина
+N
+N// процедуры на всякий случай
+Nu8 		GetPinDir(u8 n);
+N// чтение направления пина
+N
+Nu8 		GetPinInv(u8 n);
+N// чтение текущего состояния инверсии пина
+N
+Nvoid 	SetPinInv(u8 n,u8 i);
+N// установка состояния инверсии пина на значение i
+Nvoid InitVirtualPins (void);
+N// сброс состояния входного пина
+Nvoid ClrGetPin(u8 n);
+N
+N
+N#endif
+L 6 "Main\VPFrz.c" 2
+N#include "VPFrz.h"
+L 1 "Main\VPFrz.h" 1
+N#ifndef __VPFRZ_H__
+N#define __VPFRZ_H__
+N
+N#include "Defs.h"
+N
+N#ifdef __FREZER__
+N
+N#include "VirtualPins.h"
+N// фрезер
+N// выходы
+N#define MOTOR_X_STEP 	0
+N#define MOTOR_X_DIR		1
+N#define MOTOR_X_EN		2
+N#define MOTOR_Yl_STEP 	3
+N#define MOTOR_Yl_DIR	4
+N#define MOTOR_Yl_EN		5
+N#define MOTOR_Yr_STEP 	6
+N#define MOTOR_Yr_DIR	7
+N#define MOTOR_Yr_EN		8
+N#define MOTOR_Z_STEP 	9
+N#define MOTOR_Z_DIR		10
+N#define MOTOR_Z_EN		11
+N
+N#define COOLER1		12
+N#define COOLER2		13
+N
+N#define	SPINDEL_BACK	14
+N#define	SPINDEL_FORW	15
+N
+N// IN1 20
+N#define BTN_MOTOR_Y_DIR		20
+N#define BTN_MOTOR_Y_BACK	21
+N#define BTN_MOTOR_Z_DIR		20
+N#define BTN_MOTOR_Z_BACK	21
+N#define BTN_MOTOR_X_DIR		22
+N#define BTN_MOTOR_X_BACK	23
+N#define BTN_NUM_5			24
+N//#define BTN_MOTOR_Z_DIR		24		   
+N//#define BTN_MOTOR_Z_BACK	25
+N
+N#define BTN_AXIS_SWITCH		25
+N// IN8
+N#define SENS_SET_POINT		27
+N// IN9
+N#define SENS_MOTOR_Y		28
+N// IN10
+N#define SENS_MOTOR_Z		29
+N// IN11
+N#define SENS_MOTOR_X		30
+N#define CRUSH_WATER			32
+N
+Nextern TaVPIN vPinsdef;
+N#endif
+N//#ifdef __FREZER__
+N
+N#endif
+N//#define __VPFRZ_H__
+L 7 "Main\VPFrz.c" 2
+N
+N// таблица виртуальных пинов по умолчанию
+N
+NTaVPIN vPinsdef = {
+N//	nPin,	Inv,	State
+N	{OUT1,	1,		0},	// MOTOR_X_STEP
+X	{0,	1,		0},	
+N	{OUT2,	1,		0}, // MOTOR_X_DIR
+X	{1,	1,		0}, 
+N	{OUT3,	1,		0}, // MOTOR_X_EN
+X	{2,	1,		0}, 
+N	{OUT4,	1,		0}, // MOTOR_Yl_STEP
+X	{3,	1,		0}, 
+N	{OUT5,	1,		0}, // MOTOR_Yl_DIR
+X	{4,	1,		0}, 
+N	{OUT6,	1,		0}, // MOTOR_Yl_EN
+X	{5,	1,		0}, 
+N	{OUT7,	1,		0}, // MOTOR_Yr_STEP
+X	{6,	1,		0}, 
+N	{OUT8,	0,		0},	// MOTOR_Yr_DIR		
+X	{7,	0,		0},	
+N	{OUT9,	1,		0},	// MOTOR_Yr_EN
+X	{8,	1,		0},	
+N	{OUT10,	1,		0},	// MOTOR_Z_STEP
+X	{9,	1,		0},	
+N	{OUT11,	0,		0},	// MOTOR_Z_DIR
+X	{10,	0,		0},	
+N	{OUT12,	1,		0},	// MOTOR_Z_EN
+X	{11,	1,		0},	
+N	{OUT13,	1,		0},	// COOLER1
+X	{12,	1,		0},	
+N	{OUT14,	0,		0},	// COOLER2
+X	{13,	0,		0},	
+N	{OUT15,	0,		0},	// SPINDEL_F
+X	{14,	0,		0},	
+N	{OUT16,	1,		0},	// SPINDEL_B
+X	{15,	1,		0},	
+N	{OUT17,	1,		0},
+X	{16,	1,		0},
+N	{OUT18,	1,		0},
+X	{17,	1,		0},
+N	{OUT19,	1,		0},
+X	{18,	1,		0},
+N	{OUT20,	1,		0},
+X	{19,	1,		0},
+N
+N	{IN1,	1,		0},	 // BTN_MOTOR_YZ_DIR
+X	{20,	1,		0},	 
+N	{IN2,	1,		0},	 // BTN_MOTOR_YZ_BACK
+X	{21,	1,		0},	 
+N	{IN3,	1,		0},	 // BTN_MOTOR_X_DIR
+X	{22,	1,		0},	 
+N	{IN4,	1,		0},	 // BTN_MOTOR_X_BACK
+X	{23,	1,		0},	 
+N	{IN5,	1,		0},	 // BTN_SET_POINT	BTN_SET_PAUSE
+X	{24,	1,		0},	 
+N	{IN6,	1,		0},  //	BTN_LOW_SPEED  	BTN_SET_PAUSE_OFF_TROS
+X	{25,	1,		0},  
+N	{IN7,	1,		0},
+X	{26,	1,		0},
+N	{IN8,	1,		0},
+X	{27,	1,		0},
+N	{IN9,	1,		0},		 // SENS_MOTOR_Z
+X	{28,	1,		0},		 
+N	{IN10,	1,		0},	 // SENS_MOTOR_Y
+X	{29,	1,		0},	 
+N	{IN11,	1,		0},	 // SENS_MOTOR_X
+X	{30,	1,		0},	 
+N	{IN12,	1,		0},	 // 
+X	{31,	1,		0},	 
+N	{IN13,	1,		0},	 // CRASH_WATER
+X	{32,	1,		0},	 
+N	{IN14,	1,		0},	 // 
+X	{33,	1,		0},	 
+N	{IN15,	1,		0},	 // 
+X	{34,	1,		0},	 
+N	{IN16,	1,		0}	 // 
+X	{35,	1,		0}	 
+N
+N	};
+N
+N#endif
+N//#ifdef __FREZER__

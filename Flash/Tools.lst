@@ -1,0 +1,497 @@
+L 1 "UCNC\Tools.c"
+N
+N//=============================================================================
+N//
+N//                            Инструменты
+N//
+N//=============================================================================
+N
+N
+N
+N#include "Defs.h"
+L 1 "UCNC\Defs.h" 1
+N/*****************************************************************/
+N//
+N//  МОДУЛЬ ОБЩИХ ОПРЕДЕЛЕНИЙ
+N//
+N/*****************************************************************/
+N
+N#ifndef __DEFS_H_
+N#define __DEFS_H_
+N
+N#include <stdint.h>
+L 1 "C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h" 1
+N/* Copyright (C) ARM Ltd., 1999,2014 */
+N/* All rights reserved */
+N
+N/*
+N * RCS $Revision: 185525 $
+N * Checkin $Date: 2014-05-29 12:44:48 +0100 (Thu, 29 May 2014) $
+N * Revising $Author: agrant $
+N */
+N
+N#ifndef __stdint_h
+N#define __stdint_h
+N#define __ARMCLIB_VERSION 5060002
+N
+N  #ifdef __INT64_TYPE__
+S    /* armclang predefines '__INT64_TYPE__' and '__INT64_C_SUFFIX__' */
+S    #define __INT64 __INT64_TYPE__
+N  #else
+N    /* armcc has builtin '__int64' which can be used in --strict mode */
+N    #define __INT64 __int64
+N    #define __INT64_C_SUFFIX__ ll
+N  #endif
+N  #define __PASTE2(x, y) x ## y
+N  #define __PASTE(x, y) __PASTE2(x, y)
+N  #define __INT64_C(x)  __ESCAPE__(__PASTE(x, __INT64_C_SUFFIX__))
+N  #define __UINT64_C(x)  __ESCAPE__(__PASTE(x ## u, __INT64_C_SUFFIX__))
+N  #if defined(__clang__) || (defined(__ARMCC_VERSION) && !defined(__STRICT_ANSI__))
+X  #if 0L || (1L && !0L)
+N    /* armclang and non-strict armcc allow 'long long' in system headers */
+N    #define __LONGLONG long long
+N  #else
+S    /* strict armcc has '__int64' */
+S    #define __LONGLONG __int64
+N  #endif
+N
+N  #ifndef __STDINT_DECLS
+N  #define __STDINT_DECLS
+N
+N    #undef __CLIBNS
+N
+N    #ifdef __cplusplus
+S      namespace std {
+S          #define __CLIBNS std::
+S          extern "C" {
+N    #else
+N      #define __CLIBNS
+N    #endif  /* __cplusplus */
+N
+N
+N/*
+N * 'signed' is redundant below, except for 'signed char' and if
+N * the typedef is used to declare a bitfield.
+N */
+N
+N    /* 7.18.1.1 */
+N
+N    /* exact-width signed integer types */
+Ntypedef   signed          char int8_t;
+Ntypedef   signed short     int int16_t;
+Ntypedef   signed           int int32_t;
+Ntypedef   signed       __INT64 int64_t;
+Xtypedef   signed       __int64 int64_t;
+N
+N    /* exact-width unsigned integer types */
+Ntypedef unsigned          char uint8_t;
+Ntypedef unsigned short     int uint16_t;
+Ntypedef unsigned           int uint32_t;
+Ntypedef unsigned       __INT64 uint64_t;
+Xtypedef unsigned       __int64 uint64_t;
+N
+N    /* 7.18.1.2 */
+N
+N    /* smallest type of at least n bits */
+N    /* minimum-width signed integer types */
+Ntypedef   signed          char int_least8_t;
+Ntypedef   signed short     int int_least16_t;
+Ntypedef   signed           int int_least32_t;
+Ntypedef   signed       __INT64 int_least64_t;
+Xtypedef   signed       __int64 int_least64_t;
+N
+N    /* minimum-width unsigned integer types */
+Ntypedef unsigned          char uint_least8_t;
+Ntypedef unsigned short     int uint_least16_t;
+Ntypedef unsigned           int uint_least32_t;
+Ntypedef unsigned       __INT64 uint_least64_t;
+Xtypedef unsigned       __int64 uint_least64_t;
+N
+N    /* 7.18.1.3 */
+N
+N    /* fastest minimum-width signed integer types */
+Ntypedef   signed           int int_fast8_t;
+Ntypedef   signed           int int_fast16_t;
+Ntypedef   signed           int int_fast32_t;
+Ntypedef   signed       __INT64 int_fast64_t;
+Xtypedef   signed       __int64 int_fast64_t;
+N
+N    /* fastest minimum-width unsigned integer types */
+Ntypedef unsigned           int uint_fast8_t;
+Ntypedef unsigned           int uint_fast16_t;
+Ntypedef unsigned           int uint_fast32_t;
+Ntypedef unsigned       __INT64 uint_fast64_t;
+Xtypedef unsigned       __int64 uint_fast64_t;
+N
+N    /* 7.18.1.4 integer types capable of holding object pointers */
+N#if __sizeof_ptr == 8
+X#if 4 == 8
+Stypedef   signed       __INT64 intptr_t;
+Stypedef unsigned       __INT64 uintptr_t;
+N#else
+Ntypedef   signed           int intptr_t;
+Ntypedef unsigned           int uintptr_t;
+N#endif
+N
+N    /* 7.18.1.5 greatest-width integer types */
+Ntypedef   signed     __LONGLONG intmax_t;
+Xtypedef   signed     long long intmax_t;
+Ntypedef unsigned     __LONGLONG uintmax_t;
+Xtypedef unsigned     long long uintmax_t;
+N
+N
+N#if !defined(__cplusplus) || defined(__STDC_LIMIT_MACROS)
+X#if !0L || 0L
+N
+N    /* 7.18.2.1 */
+N
+N    /* minimum values of exact-width signed integer types */
+N#define INT8_MIN                   -128
+N#define INT16_MIN                -32768
+N#define INT32_MIN          (~0x7fffffff)   /* -2147483648 is unsigned */
+N#define INT64_MIN  __INT64_C(~0x7fffffffffffffff) /* -9223372036854775808 is unsigned */
+N
+N    /* maximum values of exact-width signed integer types */
+N#define INT8_MAX                    127
+N#define INT16_MAX                 32767
+N#define INT32_MAX            2147483647
+N#define INT64_MAX  __INT64_C(9223372036854775807)
+N
+N    /* maximum values of exact-width unsigned integer types */
+N#define UINT8_MAX                   255
+N#define UINT16_MAX                65535
+N#define UINT32_MAX           4294967295u
+N#define UINT64_MAX __UINT64_C(18446744073709551615)
+N
+N    /* 7.18.2.2 */
+N
+N    /* minimum values of minimum-width signed integer types */
+N#define INT_LEAST8_MIN                   -128
+N#define INT_LEAST16_MIN                -32768
+N#define INT_LEAST32_MIN          (~0x7fffffff)
+N#define INT_LEAST64_MIN  __INT64_C(~0x7fffffffffffffff)
+N
+N    /* maximum values of minimum-width signed integer types */
+N#define INT_LEAST8_MAX                    127
+N#define INT_LEAST16_MAX                 32767
+N#define INT_LEAST32_MAX            2147483647
+N#define INT_LEAST64_MAX  __INT64_C(9223372036854775807)
+N
+N    /* maximum values of minimum-width unsigned integer types */
+N#define UINT_LEAST8_MAX                   255
+N#define UINT_LEAST16_MAX                65535
+N#define UINT_LEAST32_MAX           4294967295u
+N#define UINT_LEAST64_MAX __UINT64_C(18446744073709551615)
+N
+N    /* 7.18.2.3 */
+N
+N    /* minimum values of fastest minimum-width signed integer types */
+N#define INT_FAST8_MIN           (~0x7fffffff)
+N#define INT_FAST16_MIN          (~0x7fffffff)
+N#define INT_FAST32_MIN          (~0x7fffffff)
+N#define INT_FAST64_MIN  __INT64_C(~0x7fffffffffffffff)
+N
+N    /* maximum values of fastest minimum-width signed integer types */
+N#define INT_FAST8_MAX             2147483647
+N#define INT_FAST16_MAX            2147483647
+N#define INT_FAST32_MAX            2147483647
+N#define INT_FAST64_MAX  __INT64_C(9223372036854775807)
+N
+N    /* maximum values of fastest minimum-width unsigned integer types */
+N#define UINT_FAST8_MAX            4294967295u
+N#define UINT_FAST16_MAX           4294967295u
+N#define UINT_FAST32_MAX           4294967295u
+N#define UINT_FAST64_MAX __UINT64_C(18446744073709551615)
+N
+N    /* 7.18.2.4 */
+N
+N    /* minimum value of pointer-holding signed integer type */
+N#if __sizeof_ptr == 8
+X#if 4 == 8
+S#define INTPTR_MIN INT64_MIN
+N#else
+N#define INTPTR_MIN INT32_MIN
+N#endif
+N
+N    /* maximum value of pointer-holding signed integer type */
+N#if __sizeof_ptr == 8
+X#if 4 == 8
+S#define INTPTR_MAX INT64_MAX
+N#else
+N#define INTPTR_MAX INT32_MAX
+N#endif
+N
+N    /* maximum value of pointer-holding unsigned integer type */
+N#if __sizeof_ptr == 8
+X#if 4 == 8
+S#define UINTPTR_MAX INT64_MAX
+N#else
+N#define UINTPTR_MAX INT32_MAX
+N#endif
+N
+N    /* 7.18.2.5 */
+N
+N    /* minimum value of greatest-width signed integer type */
+N#define INTMAX_MIN  __ESCAPE__(~0x7fffffffffffffffll)
+N
+N    /* maximum value of greatest-width signed integer type */
+N#define INTMAX_MAX  __ESCAPE__(9223372036854775807ll)
+N
+N    /* maximum value of greatest-width unsigned integer type */
+N#define UINTMAX_MAX __ESCAPE__(18446744073709551615ull)
+N
+N    /* 7.18.3 */
+N
+N    /* limits of ptrdiff_t */
+N#if __sizeof_ptr == 8
+X#if 4 == 8
+S#define PTRDIFF_MIN INT64_MIN
+S#define PTRDIFF_MAX INT64_MAX
+N#else
+N#define PTRDIFF_MIN INT32_MIN
+N#define PTRDIFF_MAX INT32_MAX
+N#endif
+N
+N    /* limits of sig_atomic_t */
+N#define SIG_ATOMIC_MIN (~0x7fffffff)
+N#define SIG_ATOMIC_MAX   2147483647
+N
+N    /* limit of size_t */
+N#if __sizeof_ptr == 8
+X#if 4 == 8
+S#define SIZE_MAX UINT64_MAX
+N#else
+N#define SIZE_MAX UINT32_MAX
+N#endif
+N
+N    /* limits of wchar_t */
+N    /* NB we have to undef and redef because they're defined in both
+N     * stdint.h and wchar.h */
+N#undef WCHAR_MIN
+N#undef WCHAR_MAX
+N
+N#if defined(__WCHAR32) || (defined(__ARM_SIZEOF_WCHAR_T) && __ARM_SIZEOF_WCHAR_T == 4)
+X#if 0L || (0L && __ARM_SIZEOF_WCHAR_T == 4)
+S  #define WCHAR_MIN   0
+S  #define WCHAR_MAX   0xffffffffU
+N#else
+N  #define WCHAR_MIN   0
+N  #define WCHAR_MAX   65535
+N#endif
+N
+N    /* limits of wint_t */
+N#define WINT_MIN (~0x7fffffff)
+N#define WINT_MAX 2147483647
+N
+N#endif /* __STDC_LIMIT_MACROS */
+N
+N#if !defined(__cplusplus) || defined(__STDC_CONSTANT_MACROS)
+X#if !0L || 0L
+N
+N    /* 7.18.4.1 macros for minimum-width integer constants */
+N#define INT8_C(x)   (x)
+N#define INT16_C(x)  (x)
+N#define INT32_C(x)  (x)
+N#define INT64_C(x)  __INT64_C(x)
+N
+N#define UINT8_C(x)  (x ## u)
+N#define UINT16_C(x) (x ## u)
+N#define UINT32_C(x) (x ## u)
+N#define UINT64_C(x) __UINT64_C(x)
+N
+N    /* 7.18.4.2 macros for greatest-width integer constants */
+N#define INTMAX_C(x)  __ESCAPE__(x ## ll)
+N#define UINTMAX_C(x) __ESCAPE__(x ## ull)
+N
+N#endif /* __STDC_CONSTANT_MACROS */
+N
+N    #ifdef __cplusplus
+S         }  /* extern "C" */
+S      }  /* namespace std */
+N    #endif /* __cplusplus */
+N  #endif /* __STDINT_DECLS */
+N
+N  #ifdef __cplusplus
+S    #ifndef __STDINT_NO_EXPORTS
+S      using ::std::int8_t;
+S      using ::std::int16_t;
+S      using ::std::int32_t;
+S      using ::std::int64_t;
+S      using ::std::uint8_t;
+S      using ::std::uint16_t;
+S      using ::std::uint32_t;
+S      using ::std::uint64_t;
+S      using ::std::int_least8_t;
+S      using ::std::int_least16_t;
+S      using ::std::int_least32_t;
+S      using ::std::int_least64_t;
+S      using ::std::uint_least8_t;
+S      using ::std::uint_least16_t;
+S      using ::std::uint_least32_t;
+S      using ::std::uint_least64_t;
+S      using ::std::int_fast8_t;
+S      using ::std::int_fast16_t;
+S      using ::std::int_fast32_t;
+S      using ::std::int_fast64_t;
+S      using ::std::uint_fast8_t;
+S      using ::std::uint_fast16_t;
+S      using ::std::uint_fast32_t;
+S      using ::std::uint_fast64_t;
+S      using ::std::intptr_t;
+S      using ::std::uintptr_t;
+S      using ::std::intmax_t;
+S      using ::std::uintmax_t;
+S    #endif
+N  #endif /* __cplusplus */
+N
+N#undef __INT64
+N#undef __LONGLONG
+N
+N#endif /* __stdint_h */
+N
+N/* end of stdint.h */
+L 11 "UCNC\Defs.h" 2
+N
+N#define TRUE 	1
+N#define FALSE 	0
+N
+N//--------------------------------------------------
+N// Короткие имена стандартных типов
+N//--------------------------------------------------
+Ntypedef int8_t   s8;
+Ntypedef int16_t  s16;
+Ntypedef int32_t  s32;
+Ntypedef int64_t  s64;
+Ntypedef uint8_t  u8;
+Ntypedef uint16_t u16;
+Ntypedef uint32_t u32;
+Ntypedef uint64_t u64;
+Ntypedef u8 bool;
+Ntypedef u8 BOOL;
+N
+N//#define VERSION 0x01020124
+N#define VERSION 0x01020124
+N// отладка функции Move_Handler
+N//#define MOVE_D
+N// пила
+N// отключение загрузки параметров с флэш
+N//#define __NOT_LOAD_PARAMS__
+N// пила
+N//#define __SAW__
+N// фрезер
+N#define __FREZER__
+N#endif // __DEFS_H_
+L 11 "UCNC\Tools.c" 2
+N#include "Tools.h"
+L 1 "UCNC\Tools.h" 1
+N
+N//****************************************************************************
+N//
+N//                            Инструменты
+N//
+N//****************************************************************************
+N
+N
+N#ifndef __TOOLS_H_
+N#define __TOOLS_H_
+N#include "Defs.h"
+N
+N#define OUTF1T(a) (int)((a)*1000)
+N#define OUTF1H(a) (int)((a)*100)
+N#define OUTF1D(a) (int)((a)*10)
+N#define OUTF1(a) (int)(a)
+N#define LPMIN 1
+N// ограничения
+N//#define CLPON(T,LPOFF) ( T > (LPOFF+LPMIN) ? (T-LPOFF) : LPMIN)
+N//#define CLPOFF(T,LPON) ( T > (LPON+LPMIN) ? (T-LPON) : LPMIN)
+N// эксперименты
+N#define LPKORR 0
+N#define CLPOFF(T,LPON) ( T > (LPON+LPMIN+LPKORR) ? (T-LPON-LPKORR) : LPMIN)
+N//#define CHECKLPON(LPON) {if (LPON < LPMIN) LPON=LPMIN;}
+N#define CHECKLPOFF(LPOFF) {if (LPOFF < LPMIN) LPOFF=LPMIN;}
+N// эксперименты
+N//#define CLPONY(T,LPOFF) (1)
+N//#define CHECKLPON(LPON) (LPON)
+N// без ограничений
+N
+N// Вычислить контрольную сумму CRC8
+Nu8 CRC8(u8 *ptr, u8 crc, u16 len);
+N
+Nfloat sqr(float x);
+Nint Round(float f);
+Ns32 abss32(s32 a);
+N
+N#endif // __TOOLS_H_
+N
+L 12 "UCNC\Tools.c" 2
+N
+N
+N
+Nu8 Table_CRC8[256] =
+N{
+N	0x00, 0xFE, 0xFF, 0x01, 0xFD, 0x03, 0x02, 0xFC,
+N	0xF9, 0x07, 0x06, 0xF8, 0x04, 0xFA, 0xFB, 0x05,
+N	0xF1, 0x0F, 0x0E, 0xF0, 0x0C, 0xF2, 0xF3, 0x0D,
+N	0x08, 0xF6, 0xF7, 0x09, 0xF5, 0x0B, 0x0A, 0xF4,
+N	0xE1, 0x1F, 0x1E, 0xE0, 0x1C, 0xE2, 0xE3, 0x1D,
+N	0x18, 0xE6, 0xE7, 0x19, 0xE5, 0x1B, 0x1A, 0xE4,
+N	0x10, 0xEE, 0xEF, 0x11, 0xED, 0x13, 0x12, 0xEC,
+N	0xE9, 0x17, 0x16, 0xE8, 0x14, 0xEA, 0xEB, 0x15,
+N	0xC1, 0x3F, 0x3E, 0xC0, 0x3C, 0xC2, 0xC3, 0x3D,
+N	0x38, 0xC6, 0xC7, 0x39, 0xC5, 0x3B, 0x3A, 0xC4,
+N	0x30, 0xCE, 0xCF, 0x31, 0xCD, 0x33, 0x32, 0xCC,
+N	0xC9, 0x37, 0x36, 0xC8, 0x34, 0xCA, 0xCB, 0x35,
+N	0x20, 0xDE, 0xDF, 0x21, 0xDD, 0x23, 0x22, 0xDC,
+N	0xD9, 0x27, 0x26, 0xD8, 0x24, 0xDA, 0xDB, 0x25,
+N	0xD1, 0x2F, 0x2E, 0xD0, 0x2C, 0xD2, 0xD3, 0x2D,
+N	0x28, 0xD6, 0xD7, 0x29, 0xD5, 0x2B, 0x2A, 0xD4,
+N	0x81, 0x7F, 0x7E, 0x80, 0x7C, 0x82, 0x83, 0x7D,
+N	0x78, 0x86, 0x87, 0x79, 0x85, 0x7B, 0x7A, 0x84,
+N	0x70, 0x8E, 0x8F, 0x71, 0x8D, 0x73, 0x72, 0x8C,
+N	0x89, 0x77, 0x76, 0x88, 0x74, 0x8A, 0x8B, 0x75,
+N	0x60, 0x9E, 0x9F, 0x61, 0x9D, 0x63, 0x62, 0x9C,
+N	0x99, 0x67, 0x66, 0x98, 0x64, 0x9A, 0x9B, 0x65,
+N	0x91, 0x6F, 0x6E, 0x90, 0x6C, 0x92, 0x93, 0x6D,
+N	0x68, 0x96, 0x97, 0x69, 0x95, 0x6B, 0x6A, 0x94,
+N	0x40, 0xBE, 0xBF, 0x41, 0xBD, 0x43, 0x42, 0xBC,
+N	0xB9, 0x47, 0x46, 0xB8, 0x44, 0xBA, 0xBB, 0x45,
+N	0xB1, 0x4F, 0x4E, 0xB0, 0x4C, 0xB2, 0xB3, 0x4D,
+N	0x48, 0xB6, 0xB7, 0x49, 0xB5, 0x4B, 0x4A, 0xB4,
+N	0xA1, 0x5F, 0x5E, 0xA0, 0x5C, 0xA2, 0xA3, 0x5D,
+N	0x58, 0xA6, 0xA7, 0x59, 0xA5, 0x5B, 0x5A, 0xA4,
+N	0x50, 0xAE, 0xAF, 0x51, 0xAD, 0x53, 0x52, 0xAC,
+N	0xA9, 0x57, 0x56, 0xA8, 0x54, 0xAA, 0xAB, 0x55
+N};
+N
+N
+N// Вычислить контрольную сумму CRC8
+N// ВНИМАНИЕ! Идем по буферу назад!
+Nu8 CRC8(u8 *ptr, u8 crc, u16 len) {
+N	while (len--) {
+N		crc = Table_CRC8[crc ^ *ptr--];
+N	}
+N	return crc;
+N}
+N
+Nfloat sqr(float x) {
+N	return x*x;
+N}
+N
+Nint Round(float f){
+N	if ((f-(int)f) > 0.5) {
+N		return (int)f+1;
+N	} else {
+N		return (int)f;
+N	}
+N}
+N
+Ns32 abss32(s32 a) {
+N	if (a < 0) return -a;
+N	else return a;
+N}
+N
+N//=============================================================================
+N//
+N//                               End Of File
+N//
+N//=============================================================================

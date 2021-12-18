@@ -1,0 +1,513 @@
+Dependencies for Project 'saw', Target 'saw': (DO NOT MODIFY !)
+CompilerVersion: 5060960::V5.06 update 7 (build 960)::ARMCC
+F (.\CM3\DeviceSupport\NXP\LPC17xx\startup\arm\startup_LPC17xx.s)(0x58BEA29E)(--cpu Cortex-M3 -g --apcs=interwork -IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\NXP\LPC17xx--pd "__UVISION_VERSION SETA 536"--list .\flash\startup_lpc17xx.lst --xref -o .\flash\startup_lpc17xx.o --depend .\flash\startup_lpc17xx.d)
+F (.\CM3\CoreSupport\core_cm3.c)(0x4DD128FA)(-c --cpu Cortex-M3 -g -O3 --apcs=interwork -IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\NXP\LPC17xx-D__UVISION_VERSION="536"-o .\flash\core_cm3.o --omf_browse .\flash\core_cm3.crf --depend .\flash\core_cm3.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
+F (.\CM3\DeviceSupport\NXP\LPC17xx\system_LPC17xx.c)(0x588F5C2D)(-c --cpu Cortex-M3 -g -O3 --apcs=interwork -IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\NXP\LPC17xx-D__UVISION_VERSION="536"-o .\flash\system_lpc17xx.o --omf_browse .\flash\system_lpc17xx.crf --depend .\flash\system_lpc17xx.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
+I (CM3\DeviceSupport\NXP\LPC17xx\LPC17xx.h)(0x4E395046)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cm3.h)(0x559D23DA)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cmInstr.h)(0x559D23DA)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cmFunc.h)(0x559D23DA)
+I (CM3\DeviceSupport\NXP\LPC17xx\system_LPC17xx.h)(0x4DD128FA)
+F (.\Drivers\source\lpc17xx_clkpwr.c)(0x52EB72DE)(-c --cpu Cortex-M3 -g -O3 --apcs=interwork -I .\Drivers\include -I .\Common -I .\Retarget-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\NXP\LPC17xx-D__UVISION_VERSION="536"-o .\flash\lpc17xx_clkpwr.o --omf_browse .\flash\lpc17xx_clkpwr.crf --depend .\flash\lpc17xx_clkpwr.d)
+I (.\Drivers\include\lpc17xx_clkpwr.h)(0x4E395048)
+I (C:\Keil_v5\ARM\INC\NXP\LPC17xx\lpc17xx.h)(0x559D19F2)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cm3.h)(0x559D23DA)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cmInstr.h)(0x559D23DA)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cmFunc.h)(0x559D23DA)
+I (C:\Keil_v5\ARM\INC\NXP\LPC17xx\system_LPC17xx.h)(0x57039452)
+I (.\Drivers\include\lpc_types.h)(0x52D784BE)
+F (.\Drivers\source\lpc17xx_pinsel.c)(0x4E0093EE)(-c --cpu Cortex-M3 -g -O3 --apcs=interwork -I .\Drivers\include -I .\Common -I .\Retarget-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\NXP\LPC17xx-D__UVISION_VERSION="536"-o .\flash\lpc17xx_pinsel.o --omf_browse .\flash\lpc17xx_pinsel.crf --depend .\flash\lpc17xx_pinsel.d)
+I (.\Drivers\include\lpc17xx_pinsel.h)(0x4E395048)
+I (C:\Keil_v5\ARM\INC\NXP\LPC17xx\lpc17xx.h)(0x559D19F2)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cm3.h)(0x559D23DA)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cmInstr.h)(0x559D23DA)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cmFunc.h)(0x559D23DA)
+I (C:\Keil_v5\ARM\INC\NXP\LPC17xx\system_LPC17xx.h)(0x57039452)
+I (.\Drivers\include\lpc_types.h)(0x52D784BE)
+F (.\Drivers\source\lpc17xx_uart.c)(0x5890AAF6)(-c --cpu Cortex-M3 -g -O3 --apcs=interwork -I .\Drivers\include -I .\Common -I .\Retarget-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\NXP\LPC17xx-D__UVISION_VERSION="536"-o .\flash\lpc17xx_uart.o --omf_browse .\flash\lpc17xx_uart.crf --depend .\flash\lpc17xx_uart.d)
+I (.\Drivers\include\lpc17xx_uart.h)(0x5890AB92)
+I (C:\Keil_v5\ARM\INC\NXP\LPC17xx\LPC17xx.h)(0x559D19F2)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cm3.h)(0x559D23DA)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cmInstr.h)(0x559D23DA)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cmFunc.h)(0x559D23DA)
+I (C:\Keil_v5\ARM\INC\NXP\LPC17xx\system_LPC17xx.h)(0x57039452)
+I (.\Drivers\include\lpc_types.h)(0x52D784BE)
+I (.\Drivers\include\lpc17xx_clkpwr.h)(0x4E395048)
+I (.\Drivers\include\lpc17xx_libcfg_default.h)(0x52D6C3DE)
+F (.\Drivers\source\lpc17xx_timer.c)(0x588DEED4)(-c --cpu Cortex-M3 -g -O3 --apcs=interwork -I .\Drivers\include -I .\Common -I .\Retarget-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\NXP\LPC17xx-D__UVISION_VERSION="536"-o .\flash\lpc17xx_timer.o --omf_browse .\flash\lpc17xx_timer.crf --depend .\flash\lpc17xx_timer.d)
+I (.\Drivers\include\lpc17xx_timer.h)(0x4E395048)
+I (C:\Keil_v5\ARM\INC\NXP\LPC17xx\LPC17xx.h)(0x559D19F2)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cm3.h)(0x559D23DA)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cmInstr.h)(0x559D23DA)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cmFunc.h)(0x559D23DA)
+I (C:\Keil_v5\ARM\INC\NXP\LPC17xx\system_LPC17xx.h)(0x57039452)
+I (.\Drivers\include\lpc_types.h)(0x52D784BE)
+I (.\Drivers\include\lpc17xx_clkpwr.h)(0x4E395048)
+I (.\Drivers\include\lpc17xx_pinsel.h)(0x4E395048)
+I (.\Drivers\include\lpc17xx_libcfg_default.h)(0x52D6C3DE)
+F (.\Drivers\sbl_iap.c)(0x543241D4)(-c --cpu Cortex-M3 -g -O3 --apcs=interwork -I .\Drivers\include -I .\Common -I .\Retarget-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\NXP\LPC17xx-D__UVISION_VERSION="536"-o .\flash\sbl_iap.o --omf_browse .\flash\sbl_iap.crf --depend .\flash\sbl_iap.d)
+I (C:\Keil_v5\ARM\INC\NXP\LPC17xx\LPC17xx.h)(0x559D19F2)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cm3.h)(0x559D23DA)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cmInstr.h)(0x559D23DA)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cmFunc.h)(0x559D23DA)
+I (C:\Keil_v5\ARM\INC\NXP\LPC17xx\system_LPC17xx.h)(0x57039452)
+I (Drivers\sbl_iap.h)(0x54323FA2)
+I (Drivers\sbl_config.h)(0x518612DA)
+F (.\Main\Modbus.c)(0x61BE220B)(-c --cpu Cortex-M3 -g -O3 --apcs=interwork -I .\Main -I .\Drivers -I .\Drivers\include -I .\UCNC-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\NXP\LPC17xx-D__UVISION_VERSION="536"-o .\flash\modbus.o --omf_browse .\flash\modbus.crf --depend .\flash\modbus.d)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x602569CE)
+I (.\UCNC\Defs.h)(0x61BE00AE)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
+I (Main\Modbus.h)(0x61BE0C1B)
+I (.\UCNC\ti.h)(0x61BDFCEC)
+I (.\UCNC\Timers.h)(0x58B57217)
+I (.\UCNC\UART.h)(0x5893478F)
+I (.\Drivers\include\lpc17xx_uart.h)(0x5890AB92)
+I (C:\Keil_v5\ARM\INC\NXP\LPC17xx\LPC17xx.h)(0x559D19F2)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cm3.h)(0x559D23DA)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cmInstr.h)(0x559D23DA)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cmFunc.h)(0x559D23DA)
+I (C:\Keil_v5\ARM\INC\NXP\LPC17xx\system_LPC17xx.h)(0x57039452)
+I (.\Drivers\include\lpc_types.h)(0x52D784BE)
+I (Main\queue.h)(0x5655706C)
+I (Main\regs.h)(0x58DE689C)
+I (Main\motors.h)(0x5930F9B1)
+I (Main\msg.h)(0x5655704C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x602569C6)
+I (.\UCNC\Nextion.h)(0x61BDFCEC)
+F (.\Main\FS.c)(0x59D75877)(-c --cpu Cortex-M3 -g -O3 --apcs=interwork -I .\Main -I .\Drivers -I .\Drivers\include -I .\UCNC-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\NXP\LPC17xx-D__UVISION_VERSION="536"-o .\flash\fs.o --omf_browse .\flash\fs.crf --depend .\flash\fs.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x602569C4)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x602569CE)
+I (.\UCNC\Defs.h)(0x61BE00AE)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
+I (.\UCNC\Tools.h)(0x5819EAEC)
+I (Main\FS.h)(0x566E6552)
+I (.\UCNC\Flash.h)(0x54BF6CA2)
+I (C:\Keil_v5\ARM\INC\NXP\LPC17xx\LPC17xx.h)(0x559D19F2)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cm3.h)(0x559D23DA)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cmInstr.h)(0x559D23DA)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cmFunc.h)(0x559D23DA)
+I (C:\Keil_v5\ARM\INC\NXP\LPC17xx\system_LPC17xx.h)(0x57039452)
+I (.\Drivers\LPC1768_define.h)(0x5321CBC0)
+I (Main\msg.h)(0x5655704C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x602569C6)
+F (.\Main\msg.c)(0x61BE0C1B)(-c --cpu Cortex-M3 -g -O3 --apcs=interwork -I .\Main -I .\Drivers -I .\Drivers\include -I .\UCNC-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\NXP\LPC17xx-D__UVISION_VERSION="536"-o .\flash\msg.o --omf_browse .\flash\msg.crf --depend .\flash\msg.d)
+I (.\UCNC\Defs.h)(0x61BE00AE)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x602569C4)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x602569CE)
+I (Main\msg.h)(0x5655704C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x602569C6)
+I (Main\modbus.h)(0x61BE0C1B)
+I (Main\regs.h)(0x58DE689C)
+I (C:\Keil_v5\ARM\INC\NXP\LPC17xx\LPC17xx.h)(0x559D19F2)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cm3.h)(0x559D23DA)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cmInstr.h)(0x559D23DA)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cmFunc.h)(0x559D23DA)
+I (C:\Keil_v5\ARM\INC\NXP\LPC17xx\system_LPC17xx.h)(0x57039452)
+I (Main\motors.h)(0x5930F9B1)
+I (.\UCNC\Timers.h)(0x58B57217)
+I (Main\u0packets.h)(0x61BE1153)
+I (Main\fs.h)(0x566E6552)
+F (.\Main\bFS.c)(0x56F91170)(-c --cpu Cortex-M3 -g -O3 --apcs=interwork -I .\Main -I .\Drivers -I .\Drivers\include -I .\UCNC-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\NXP\LPC17xx-D__UVISION_VERSION="536"-o .\flash\bfs.o --omf_browse .\flash\bfs.crf --depend .\flash\bfs.d)
+I (.\UCNC\Defs.h)(0x61BE00AE)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
+I (Main\msg.h)(0x5655704C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x602569C6)
+I (Main\FS.h)(0x566E6552)
+I (Main\bFS.h)(0x566AC580)
+F (.\UCNC\ti.c)(0x61B91F69)(-c --cpu Cortex-M3 -g -O3 --apcs=interwork -I .\Main -I .\Drivers -I .\Drivers\include -I .\UCNC-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\NXP\LPC17xx-D__UVISION_VERSION="536"-o .\flash\ti.o --omf_browse .\flash\ti.crf --depend .\flash\ti.d)
+I (UCNC\Defs.h)(0x61BE00AE)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
+I (UCNC\ti.h)(0x61BDFCEC)
+I (UCNC\Timers.h)(0x58B57217)
+F (.\UCNC\Timers.c)(0x61B89BB6)(-c --cpu Cortex-M3 -g -O3 --apcs=interwork -I .\Main -I .\Drivers -I .\Drivers\include -I .\UCNC-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\NXP\LPC17xx-D__UVISION_VERSION="536"-o .\flash\timers.o --omf_browse .\flash\timers.crf --depend .\flash\timers.d)
+I (UCNC\Defs.h)(0x61BE00AE)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
+I (.\Drivers\include\lpc17xx_timer.h)(0x4E395048)
+I (C:\Keil_v5\ARM\INC\NXP\LPC17xx\LPC17xx.h)(0x559D19F2)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cm3.h)(0x559D23DA)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cmInstr.h)(0x559D23DA)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cmFunc.h)(0x559D23DA)
+I (C:\Keil_v5\ARM\INC\NXP\LPC17xx\system_LPC17xx.h)(0x57039452)
+I (.\Drivers\include\lpc_types.h)(0x52D784BE)
+I (UCNC\Timers.h)(0x58B57217)
+I (.\Main\msg.h)(0x5655704C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x602569C6)
+I (UCNC\ti.h)(0x61BDFCEC)
+F (.\UCNC\UART.c)(0x61BACFCE)(-c --cpu Cortex-M3 -g -O3 --apcs=interwork -I .\Main -I .\Drivers -I .\Drivers\include -I .\UCNC-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\NXP\LPC17xx-D__UVISION_VERSION="536"-o .\flash\uart.o --omf_browse .\flash\uart.crf --depend .\flash\uart.d)
+I (UCNC\Defs.h)(0x61BE00AE)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
+I (.\Drivers\include\lpc17xx_uart.h)(0x5890AB92)
+I (C:\Keil_v5\ARM\INC\NXP\LPC17xx\LPC17xx.h)(0x559D19F2)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cm3.h)(0x559D23DA)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cmInstr.h)(0x559D23DA)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cmFunc.h)(0x559D23DA)
+I (C:\Keil_v5\ARM\INC\NXP\LPC17xx\system_LPC17xx.h)(0x57039452)
+I (.\Drivers\include\lpc_types.h)(0x52D784BE)
+I (.\Drivers\include\lpc17xx_libcfg_default.h)(0x52D6C3DE)
+I (.\Drivers\include\lpc17xx_pinsel.h)(0x4E395048)
+I (UCNC\UART.h)(0x5893478F)
+I (UCNC\ti.h)(0x61BDFCEC)
+I (UCNC\Timers.h)(0x58B57217)
+I (.\Main\msg.h)(0x5655704C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x602569C6)
+F (.\UCNC\Tools.c)(0x56BC4186)(-c --cpu Cortex-M3 -g -O3 --apcs=interwork -I .\Main -I .\Drivers -I .\Drivers\include -I .\UCNC-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\NXP\LPC17xx-D__UVISION_VERSION="536"-o .\flash\tools.o --omf_browse .\flash\tools.crf --depend .\flash\tools.d)
+I (UCNC\Defs.h)(0x61BE00AE)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
+I (UCNC\Tools.h)(0x5819EAEC)
+F (.\UCNC\Flash.c)(0x594E335D)(-c --cpu Cortex-M3 -g -O3 --apcs=interwork -I .\Main -I .\Drivers -I .\Drivers\include -I .\UCNC-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\NXP\LPC17xx-D__UVISION_VERSION="536"-o .\flash\flash.o --omf_browse .\flash\flash.crf --depend .\flash\flash.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x602569C4)
+I (.\Main\msg.h)(0x5655704C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x602569C6)
+I (.\UCNC\Defs.h)(0x61BE00AE)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
+I (UCNC\Flash.h)(0x54BF6CA2)
+I (C:\Keil_v5\ARM\INC\NXP\LPC17xx\LPC17xx.h)(0x559D19F2)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cm3.h)(0x559D23DA)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cmInstr.h)(0x559D23DA)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cmFunc.h)(0x559D23DA)
+I (C:\Keil_v5\ARM\INC\NXP\LPC17xx\system_LPC17xx.h)(0x57039452)
+I (.\Drivers\LPC1768_define.h)(0x5321CBC0)
+F (.\UCNC\StaticPins.c)(0x56135B4C)(-c --cpu Cortex-M3 -g -O3 --apcs=interwork -I .\Main -I .\Drivers -I .\Drivers\include -I .\UCNC-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\NXP\LPC17xx-D__UVISION_VERSION="536"-o .\flash\staticpins.o --omf_browse .\flash\staticpins.crf --depend .\flash\staticpins.d)
+I (UCNC\StaticPins.h)(0x5891F19F)
+I (UCNC\Defs.h)(0x61BE00AE)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
+I (C:\Keil_v5\ARM\INC\NXP\LPC17xx\LPC17xx.h)(0x559D19F2)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cm3.h)(0x559D23DA)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cmInstr.h)(0x559D23DA)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cmFunc.h)(0x559D23DA)
+I (C:\Keil_v5\ARM\INC\NXP\LPC17xx\system_LPC17xx.h)(0x57039452)
+F (.\UCNC\VirtualPins.c)(0x58986DE2)(-c --cpu Cortex-M3 -g -O3 --apcs=interwork -I .\Main -I .\Drivers -I .\Drivers\include -I .\UCNC-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\NXP\LPC17xx-D__UVISION_VERSION="536"-o .\flash\virtualpins.o --omf_browse .\flash\virtualpins.crf --depend .\flash\virtualpins.d)
+I (UCNC\Defs.h)(0x61BE00AE)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
+I (UCNC\StaticPins.h)(0x5891F19F)
+I (C:\Keil_v5\ARM\INC\NXP\LPC17xx\LPC17xx.h)(0x559D19F2)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cm3.h)(0x559D23DA)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cmInstr.h)(0x559D23DA)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cmFunc.h)(0x559D23DA)
+I (C:\Keil_v5\ARM\INC\NXP\LPC17xx\system_LPC17xx.h)(0x57039452)
+I (UCNC\VirtualPins.h)(0x58B57217)
+I (UCNC\ti.h)(0x61BDFCEC)
+I (UCNC\Timers.h)(0x58B57217)
+I (.\Main\regs.h)(0x58DE689C)
+I (.\Main\motors.h)(0x5930F9B1)
+I (.\Main\KeyPad.h)(0x5656F974)
+F (.\UCNC\Nextion.c)(0x61BE069E)(-c --cpu Cortex-M3 -g -O3 --apcs=interwork -I .\Main -I .\Drivers -I .\Drivers\include -I .\UCNC-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\NXP\LPC17xx-D__UVISION_VERSION="536"-o .\flash\nextion.o --omf_browse .\flash\nextion.crf --depend .\flash\nextion.d)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x602569CE)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x602569C4)
+I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x602569C8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x602569C4)
+I (UCNC\Defs.h)(0x61BE00AE)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
+I (UCNC\Nextion.h)(0x61BDFCEC)
+I (UCNC\UART.h)(0x5893478F)
+I (.\Drivers\include\lpc17xx_uart.h)(0x5890AB92)
+I (C:\Keil_v5\ARM\INC\NXP\LPC17xx\LPC17xx.h)(0x559D19F2)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cm3.h)(0x559D23DA)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cmInstr.h)(0x559D23DA)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cmFunc.h)(0x559D23DA)
+I (C:\Keil_v5\ARM\INC\NXP\LPC17xx\system_LPC17xx.h)(0x57039452)
+I (.\Drivers\include\lpc_types.h)(0x52D784BE)
+F (.\Main\queue.c)(0x61BE0C5D)(-c --cpu Cortex-M3 -g -O3 --apcs=interwork -I .\UCNC -I .\Drivers\include -I .\Drivers-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\NXP\LPC17xx-D__UVISION_VERSION="536"-o .\flash\queue.o --omf_browse .\flash\queue.crf --depend .\flash\queue.d)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x602569CE)
+I (Main\queue.h)(0x5655706C)
+I (.\UCNC\Defs.h)(0x61BE00AE)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
+I (Main\regs.h)(0x58DE689C)
+I (C:\Keil_v5\ARM\INC\NXP\LPC17xx\LPC17xx.h)(0x559D19F2)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cm3.h)(0x559D23DA)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cmInstr.h)(0x559D23DA)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cmFunc.h)(0x559D23DA)
+I (C:\Keil_v5\ARM\INC\NXP\LPC17xx\system_LPC17xx.h)(0x57039452)
+I (Main\motors.h)(0x5930F9B1)
+I (.\UCNC\Timers.h)(0x58B57217)
+I (.\UCNC\ti.h)(0x61BDFCEC)
+I (Main\modbus.h)(0x61BE0C1B)
+I (Main\msg.h)(0x5655704C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x602569C6)
+I (Main\FreqInvr.h)(0x5752F45E)
+I (Main\KeyPad.h)(0x5656F974)
+I (Main\u0packets.h)(0x61BE1153)
+I (Main\fs.h)(0x566E6552)
+F (.\Main\u0packets.c)(0x61BE0BBF)(-c --cpu Cortex-M3 -g -O3 --apcs=interwork -I .\UCNC -I .\Drivers\include -I .\Drivers-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\NXP\LPC17xx-D__UVISION_VERSION="536"-o .\flash\u0packets.o --omf_browse .\flash\u0packets.crf --depend .\flash\u0packets.d)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x602569CE)
+I (.\UCNC\UART.h)(0x5893478F)
+I (.\UCNC\Defs.h)(0x61BE00AE)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
+I (.\Drivers\include\lpc17xx_uart.h)(0x5890AB92)
+I (C:\Keil_v5\ARM\INC\NXP\LPC17xx\LPC17xx.h)(0x559D19F2)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cm3.h)(0x559D23DA)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cmInstr.h)(0x559D23DA)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cmFunc.h)(0x559D23DA)
+I (C:\Keil_v5\ARM\INC\NXP\LPC17xx\system_LPC17xx.h)(0x57039452)
+I (.\Drivers\include\lpc_types.h)(0x52D784BE)
+I (Main\regs.h)(0x58DE689C)
+I (Main\motors.h)(0x5930F9B1)
+I (.\UCNC\Timers.h)(0x58B57217)
+I (.\UCNC\VirtualPins.h)(0x58B57217)
+I (Main\u0packets.h)(0x61BE1153)
+I (Main\fs.h)(0x566E6552)
+I (Main\modbus.h)(0x61BE0C1B)
+I (Main\Motor_Z.h)(0x588B497C)
+I (Main\Handlers.h)(0x58DE6927)
+I (.\UCNC\ti.h)(0x61BDFCEC)
+I (Main\bFS.h)(0x566AC580)
+I (.\UCNC\Flash.h)(0x54BF6CA2)
+I (.\Drivers\LPC1768_define.h)(0x5321CBC0)
+I (.\Drivers\sbl_iap.h)(0x54323FA2)
+I (Main\queue.h)(0x5655706C)
+I (Main\msg.h)(0x5655704C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x602569C6)
+I (Main\FreqInvr.h)(0x5752F45E)
+I (Main\VPFrz.h)(0x58D8F815)
+F (.\Main\u1packets.c)(0x58932538)(-c --cpu Cortex-M3 -g -O3 --apcs=interwork -I .\UCNC -I .\Drivers\include -I .\Drivers-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\NXP\LPC17xx-D__UVISION_VERSION="536"-o .\flash\u1packets.o --omf_browse .\flash\u1packets.crf --depend .\flash\u1packets.d)
+I (.\UCNC\VirtualPins.h)(0x58B57217)
+I (.\UCNC\Defs.h)(0x61BE00AE)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
+I (.\UCNC\UART.h)(0x5893478F)
+I (.\Drivers\include\lpc17xx_uart.h)(0x5890AB92)
+I (C:\Keil_v5\ARM\INC\NXP\LPC17xx\LPC17xx.h)(0x559D19F2)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cm3.h)(0x559D23DA)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cmInstr.h)(0x559D23DA)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cmFunc.h)(0x559D23DA)
+I (C:\Keil_v5\ARM\INC\NXP\LPC17xx\system_LPC17xx.h)(0x57039452)
+I (.\Drivers\include\lpc_types.h)(0x52D784BE)
+I (Main\u1packets.h)(0x58231508)
+I (Main\modbus.h)(0x61BE0C1B)
+I (Main\queue.h)(0x5655706C)
+I (Main\handlers.h)(0x58DE6927)
+I (Main\regs.h)(0x58DE689C)
+I (Main\motors.h)(0x5930F9B1)
+I (.\UCNC\Timers.h)(0x58B57217)
+F (.\Main\Main.c)(0x61BE0673)(-c --cpu Cortex-M3 -g -O3 --apcs=interwork -I .\UCNC -I .\Drivers\include -I .\Drivers-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\NXP\LPC17xx-D__UVISION_VERSION="536"-o .\flash\main.o --omf_browse .\flash\main.crf --depend .\flash\main.d)
+I (C:\Keil_v5\ARM\INC\NXP\LPC17xx\LPC17xx.h)(0x559D19F2)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cm3.h)(0x559D23DA)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cmInstr.h)(0x559D23DA)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cmFunc.h)(0x559D23DA)
+I (C:\Keil_v5\ARM\INC\NXP\LPC17xx\system_LPC17xx.h)(0x57039452)
+I (.\Drivers\include\lpc17xx_timer.h)(0x4E395048)
+I (.\Drivers\include\lpc_types.h)(0x52D784BE)
+I (.\UCNC\Defs.h)(0x61BE00AE)
+I (Main\regs.h)(0x58DE689C)
+I (Main\motors.h)(0x5930F9B1)
+I (.\UCNC\Timers.h)(0x58B57217)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x602569C4)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x602569CE)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x602569C4)
+I (.\UCNC\UART.h)(0x5893478F)
+I (.\Drivers\include\lpc17xx_uart.h)(0x5890AB92)
+I (.\UCNC\VirtualPins.h)(0x58B57217)
+I (Main\Modbus.h)(0x61BE0C1B)
+I (Main\u0packets.h)(0x61BE1153)
+I (Main\fs.h)(0x566E6552)
+I (Main\u1packets.h)(0x58231508)
+I (.\UCNC\ti.h)(0x61BDFCEC)
+I (Main\Handlers.h)(0x58DE6927)
+I (.\UCNC\Flash.h)(0x54BF6CA2)
+I (.\Drivers\LPC1768_define.h)(0x5321CBC0)
+I (Main\queue.h)(0x5655706C)
+I (Main\msg.h)(0x5655704C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x602569C6)
+I (Main\FreqInvr.h)(0x5752F45E)
+I (Main\KeyPad.h)(0x5656F974)
+I (.\UCNC\Tools.h)(0x5819EAEC)
+I (Main\pwm.h)(0x56D2DD32)
+I (Main\VPFrz.h)(0x58D8F815)
+I (Main\Motor_X.h)(0x588B497C)
+I (Main\Motor_Y.h)(0x588B497C)
+I (Main\Motor_Z.h)(0x588B497C)
+I (.\UCNC\Nextion.h)(0x61BDFCEC)
+F (.\Main\Handlers.c)(0x59E74184)(-c --cpu Cortex-M3 -g -O3 --apcs=interwork -I .\UCNC -I .\Drivers\include -I .\Drivers-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\NXP\LPC17xx-D__UVISION_VERSION="536"-o .\flash\handlers.o --omf_browse .\flash\handlers.crf --depend .\flash\handlers.d)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x602569CE)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x602569C4)
+I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x602569C8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x602569C4)
+I (.\UCNC\Defs.h)(0x61BE00AE)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
+I (.\UCNC\Tools.h)(0x5819EAEC)
+I (Main\Handlers.h)(0x58DE6927)
+I (Main\regs.h)(0x58DE689C)
+I (C:\Keil_v5\ARM\INC\NXP\LPC17xx\LPC17xx.h)(0x559D19F2)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cm3.h)(0x559D23DA)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cmInstr.h)(0x559D23DA)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cmFunc.h)(0x559D23DA)
+I (C:\Keil_v5\ARM\INC\NXP\LPC17xx\system_LPC17xx.h)(0x57039452)
+I (Main\motors.h)(0x5930F9B1)
+I (.\UCNC\Timers.h)(0x58B57217)
+I (.\UCNC\VirtualPins.h)(0x58B57217)
+I (.\UCNC\ti.h)(0x61BDFCEC)
+I (Main\msg.h)(0x5655704C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x602569C6)
+I (Main\modbus.h)(0x61BE0C1B)
+I (Main\bfs.h)(0x566AC580)
+I (Main\fs.h)(0x566E6552)
+I (Main\FreqInvr.h)(0x5752F45E)
+I (Main\VPFrz.h)(0x58D8F815)
+I (Main\Motor_X.h)(0x588B497C)
+I (Main\Motor_Y.h)(0x588B497C)
+I (Main\Motor_Z.h)(0x588B497C)
+F (.\Main\Motors.c)(0x605F4461)(-c --cpu Cortex-M3 -g -O3 --apcs=interwork -I .\UCNC -I .\Drivers\include -I .\Drivers-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\NXP\LPC17xx-D__UVISION_VERSION="536"-o .\flash\motors.o --omf_browse .\flash\motors.crf --depend .\flash\motors.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x602569C4)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x602569CE)
+I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x602569C8)
+I (.\UCNC\Defs.h)(0x61BE00AE)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
+I (.\UCNC\Tools.h)(0x5819EAEC)
+I (Main\Motors.h)(0x5930F9B1)
+I (Main\regs.h)(0x58DE689C)
+I (C:\Keil_v5\ARM\INC\NXP\LPC17xx\LPC17xx.h)(0x559D19F2)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cm3.h)(0x559D23DA)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cmInstr.h)(0x559D23DA)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cmFunc.h)(0x559D23DA)
+I (C:\Keil_v5\ARM\INC\NXP\LPC17xx\system_LPC17xx.h)(0x57039452)
+I (.\UCNC\Timers.h)(0x58B57217)
+I (.\UCNC\VirtualPins.h)(0x58B57217)
+I (Main\u0packets.h)(0x61BE1153)
+I (Main\fs.h)(0x566E6552)
+I (Main\msg.h)(0x5655704C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x602569C6)
+I (Main\Handlers.h)(0x58DE6927)
+I (.\UCNC\ti.h)(0x61BDFCEC)
+I (Main\VPFrz.h)(0x58D8F815)
+I (Main\Motor_X.h)(0x588B497C)
+I (Main\Motor_Y.h)(0x588B497C)
+I (Main\Motor_Z.h)(0x588B497C)
+I (Main\FreqInvr.h)(0x5752F45E)
+F (.\Main\FreqInvr.c)(0x584FB4C7)(-c --cpu Cortex-M3 -g -O3 --apcs=interwork -I .\UCNC -I .\Drivers\include -I .\Drivers-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\NXP\LPC17xx-D__UVISION_VERSION="536"-o .\flash\freqinvr.o --omf_browse .\flash\freqinvr.crf --depend .\flash\freqinvr.d)
+I (.\UCNC\Defs.h)(0x61BE00AE)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
+I (Main\modbus.h)(0x61BE0C1B)
+I (.\UCNC\VirtualPins.h)(0x58B57217)
+I (Main\FreqInvr.h)(0x5752F45E)
+I (Main\regs.h)(0x58DE689C)
+I (C:\Keil_v5\ARM\INC\NXP\LPC17xx\LPC17xx.h)(0x559D19F2)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cm3.h)(0x559D23DA)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cmInstr.h)(0x559D23DA)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cmFunc.h)(0x559D23DA)
+I (C:\Keil_v5\ARM\INC\NXP\LPC17xx\system_LPC17xx.h)(0x57039452)
+I (Main\motors.h)(0x5930F9B1)
+I (.\UCNC\Timers.h)(0x58B57217)
+I (Main\msg.h)(0x5655704C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x602569C6)
+I (Main\pwm.h)(0x56D2DD32)
+I (Main\VPFrz.h)(0x58D8F815)
+F (.\Main\regs.c)(0x61BB510F)(-c --cpu Cortex-M3 -g -O3 --apcs=interwork -I .\UCNC -I .\Drivers\include -I .\Drivers-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\NXP\LPC17xx-D__UVISION_VERSION="536"-o .\flash\regs.o --omf_browse .\flash\regs.crf --depend .\flash\regs.d)
+I (.\UCNC\Defs.h)(0x61BE00AE)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x602569CE)
+I (Main\regs.h)(0x58DE689C)
+I (C:\Keil_v5\ARM\INC\NXP\LPC17xx\LPC17xx.h)(0x559D19F2)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cm3.h)(0x559D23DA)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cmInstr.h)(0x559D23DA)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cmFunc.h)(0x559D23DA)
+I (C:\Keil_v5\ARM\INC\NXP\LPC17xx\system_LPC17xx.h)(0x57039452)
+I (Main\motors.h)(0x5930F9B1)
+I (.\UCNC\Timers.h)(0x58B57217)
+I (Main\msg.h)(0x5655704C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x602569C6)
+I (Main\handlers.h)(0x58DE6927)
+I (.\UCNC\ti.h)(0x61BDFCEC)
+I (Main\bfs.h)(0x566AC580)
+I (Main\fs.h)(0x566E6552)
+I (.\UCNC\VirtualPins.h)(0x58B57217)
+I (Main\Modbus.h)(0x61BE0C1B)
+I (Main\FreqInvr.h)(0x5752F45E)
+I (Main\KeyPad.h)(0x5656F974)
+I (.\UCNC\tools.h)(0x5819EAEC)
+I (Main\VPFrz.h)(0x58D8F815)
+I (Main\Motor_X.h)(0x588B497C)
+I (Main\Motor_Y.h)(0x588B497C)
+I (Main\Motor_Z.h)(0x588B497C)
+F (.\Main\VPFrz.c)(0x594C1387)(-c --cpu Cortex-M3 -g -O3 --apcs=interwork -I .\UCNC -I .\Drivers\include -I .\Drivers-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\NXP\LPC17xx-D__UVISION_VERSION="536"-o .\flash\vpfrz.o --omf_browse .\flash\vpfrz.crf --depend .\flash\vpfrz.d)
+I (.\UCNC\Defs.h)(0x61BE00AE)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
+I (.\UCNC\VirtualPins.h)(0x58B57217)
+I (Main\VPFrz.h)(0x58D8F815)
+F (.\Main\KeyPad.c)(0x58F9B08D)(-c --cpu Cortex-M3 -g -O3 --apcs=interwork -I .\UCNC -I .\Drivers\include -I .\Drivers-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\NXP\LPC17xx-D__UVISION_VERSION="536"-o .\flash\keypad.o --omf_browse .\flash\keypad.crf --depend .\flash\keypad.d)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x602569CE)
+I (.\UCNC\Defs.h)(0x61BE00AE)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
+I (Main\KeyPad.h)(0x5656F974)
+I (Main\modbus.h)(0x61BE0C1B)
+I (Main\queue.h)(0x5655706C)
+I (Main\msg.h)(0x5655704C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x602569C6)
+F (.\Main\Motor_X.c)(0x594B8513)(-c --cpu Cortex-M3 -g -O3 --apcs=interwork -I .\UCNC -I .\Drivers\include -I .\Drivers-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\NXP\LPC17xx-D__UVISION_VERSION="536"-o .\flash\motor_x.o --omf_browse .\flash\motor_x.crf --depend .\flash\motor_x.d)
+I (.\UCNC\Defs.h)(0x61BE00AE)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x602569C4)
+I (Main\Motors.h)(0x5930F9B1)
+I (Main\regs.h)(0x58DE689C)
+I (C:\Keil_v5\ARM\INC\NXP\LPC17xx\LPC17xx.h)(0x559D19F2)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cm3.h)(0x559D23DA)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cmInstr.h)(0x559D23DA)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cmFunc.h)(0x559D23DA)
+I (C:\Keil_v5\ARM\INC\NXP\LPC17xx\system_LPC17xx.h)(0x57039452)
+I (.\UCNC\Timers.h)(0x58B57217)
+I (Main\Motor_X.h)(0x588B497C)
+I (Main\Motor_Y.h)(0x588B497C)
+I (Main\Motor_Z.h)(0x588B497C)
+I (.\UCNC\VirtualPins.h)(0x58B57217)
+I (Main\VPFrz.h)(0x58D8F815)
+I (Main\msg.h)(0x5655704C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x602569C6)
+I (.\UCNC\Tools.h)(0x5819EAEC)
+I (Main\FreqInvr.h)(0x5752F45E)
+F (.\Main\Motor_Y.c)(0x594B8513)(-c --cpu Cortex-M3 -g -O3 --apcs=interwork -I .\UCNC -I .\Drivers\include -I .\Drivers-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\NXP\LPC17xx-D__UVISION_VERSION="536"-o .\flash\motor_y.o --omf_browse .\flash\motor_y.crf --depend .\flash\motor_y.d)
+I (.\UCNC\Defs.h)(0x61BE00AE)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x602569C4)
+I (Main\Motors.h)(0x5930F9B1)
+I (Main\regs.h)(0x58DE689C)
+I (C:\Keil_v5\ARM\INC\NXP\LPC17xx\LPC17xx.h)(0x559D19F2)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cm3.h)(0x559D23DA)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cmInstr.h)(0x559D23DA)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cmFunc.h)(0x559D23DA)
+I (C:\Keil_v5\ARM\INC\NXP\LPC17xx\system_LPC17xx.h)(0x57039452)
+I (.\UCNC\Timers.h)(0x58B57217)
+I (Main\Motor_X.h)(0x588B497C)
+I (Main\Motor_Y.h)(0x588B497C)
+I (Main\Motor_Z.h)(0x588B497C)
+I (.\UCNC\VirtualPins.h)(0x58B57217)
+I (Main\VPFrz.h)(0x58D8F815)
+I (Main\msg.h)(0x5655704C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x602569C6)
+I (.\UCNC\Tools.h)(0x5819EAEC)
+I (Main\FreqInvr.h)(0x5752F45E)
+F (.\Main\Motor_Z.c)(0x594E3778)(-c --cpu Cortex-M3 -g -O3 --apcs=interwork -I .\UCNC -I .\Drivers\include -I .\Drivers-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\NXP\LPC17xx-D__UVISION_VERSION="536"-o .\flash\motor_z.o --omf_browse .\flash\motor_z.crf --depend .\flash\motor_z.d)
+I (.\UCNC\Defs.h)(0x61BE00AE)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x602569C4)
+I (Main\Motors.h)(0x5930F9B1)
+I (Main\regs.h)(0x58DE689C)
+I (C:\Keil_v5\ARM\INC\NXP\LPC17xx\LPC17xx.h)(0x559D19F2)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cm3.h)(0x559D23DA)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cmInstr.h)(0x559D23DA)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cmFunc.h)(0x559D23DA)
+I (C:\Keil_v5\ARM\INC\NXP\LPC17xx\system_LPC17xx.h)(0x57039452)
+I (.\UCNC\Timers.h)(0x58B57217)
+I (Main\Motor_X.h)(0x588B497C)
+I (Main\Motor_Y.h)(0x588B497C)
+I (Main\Motor_Z.h)(0x588B497C)
+I (.\UCNC\VirtualPins.h)(0x58B57217)
+I (Main\VPFrz.h)(0x58D8F815)
+I (Main\msg.h)(0x5655704C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x602569C6)
+I (.\UCNC\Tools.h)(0x5819EAEC)
+I (Main\FreqInvr.h)(0x5752F45E)
+F (.\Main\pwm.c)(0x56D48246)(-c --cpu Cortex-M3 -g -O3 --apcs=interwork -I .\UCNC -I .\Drivers\include -I .\Drivers-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\NXP\LPC17xx-D__UVISION_VERSION="536"-o .\flash\pwm.o --omf_browse .\flash\pwm.crf --depend .\flash\pwm.d)
+I (C:\Keil_v5\ARM\INC\NXP\LPC17xx\LPC17xx.h)(0x559D19F2)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cm3.h)(0x559D23DA)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cmInstr.h)(0x559D23DA)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cmFunc.h)(0x559D23DA)
+I (C:\Keil_v5\ARM\INC\NXP\LPC17xx\system_LPC17xx.h)(0x57039452)
+I (.\UCNC\Defs.h)(0x61BE00AE)

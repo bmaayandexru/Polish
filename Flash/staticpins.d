@@ -1,0 +1,9 @@
+.\flash\staticpins.o: UCNC\StaticPins.c
+.\flash\staticpins.o: UCNC\StaticPins.h
+.\flash\staticpins.o: UCNC\Defs.h
+.\flash\staticpins.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\flash\staticpins.o: C:\Keil_v5\ARM\INC\NXP\LPC17xx\LPC17xx.h
+.\flash\staticpins.o: C:\Keil_v5\ARM\CMSIS\Include\core_cm3.h
+.\flash\staticpins.o: C:\Keil_v5\ARM\CMSIS\Include\core_cmInstr.h
+.\flash\staticpins.o: C:\Keil_v5\ARM\CMSIS\Include\core_cmFunc.h
+.\flash\staticpins.o: C:\Keil_v5\ARM\INC\NXP\LPC17xx\system_LPC17xx.h

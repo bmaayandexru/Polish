@@ -1,0 +1,13 @@
+.\flash\flash.o: UCNC\Flash.c
+.\flash\flash.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\flash\flash.o: .\Main\msg.h
+.\flash\flash.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+.\flash\flash.o: .\UCNC\Defs.h
+.\flash\flash.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\flash\flash.o: UCNC\Flash.h
+.\flash\flash.o: C:\Keil_v5\ARM\INC\NXP\LPC17xx\LPC17xx.h
+.\flash\flash.o: C:\Keil_v5\ARM\CMSIS\Include\core_cm3.h
+.\flash\flash.o: C:\Keil_v5\ARM\CMSIS\Include\core_cmInstr.h
+.\flash\flash.o: C:\Keil_v5\ARM\CMSIS\Include\core_cmFunc.h
+.\flash\flash.o: C:\Keil_v5\ARM\INC\NXP\LPC17xx\system_LPC17xx.h
+.\flash\flash.o: .\Drivers\LPC1768_define.h

@@ -1,0 +1,9 @@
+.\flash\keypad.o: Main\KeyPad.c
+.\flash\keypad.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\flash\keypad.o: .\UCNC\Defs.h
+.\flash\keypad.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\flash\keypad.o: Main\KeyPad.h
+.\flash\keypad.o: Main\modbus.h
+.\flash\keypad.o: Main\queue.h
+.\flash\keypad.o: Main\msg.h
+.\flash\keypad.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h

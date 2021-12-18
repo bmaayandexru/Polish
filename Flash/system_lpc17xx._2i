@@ -1,0 +1,6 @@
+-c --cpu Cortex-M3 -g -O2 --apcs=interwork --asm --interleave --asm_dir ".\\"
+-I C:\Keil_v5\ARM\RV31\INC
+-I C:\Keil_v5\ARM\CMSIS\Include
+-I C:\Keil_v5\ARM\Inc\NXP\LPC17xx
+-D__UVISION_VERSION="517"
+-o .\flash\system_lpc17xx.o --list_dir ".\\" --list --omf_browse .\flash\system_lpc17xx.crf --depend .\flash\system_lpc17xx.d --feedback ".\Flash\saw.fed" "CM3\DeviceSupport\NXP\LPC17xx\system_LPC17xx.c"
